@@ -10,19 +10,9 @@ ehthumbs.db
 ehthumbs_vista.db
 [Dd]esktop.ini
 
-# Python related files.
-*.pyc
-*.pyo
-*.pyi
-
 # Editor files.
 *~
 *.bak
-
-# Compiled Ren'Py files.
-*.rpyc
-*.rpyb
-*.rpymc
 
 # Ren'Py log files.
 log.txt
