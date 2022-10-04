@@ -5,7 +5,7 @@ init -1 python:
     Position = Transform
 
     style.default.size = 36
-    
+
     layout.provides("load_save")
     layout.provides("yesno_prompt")
     layout.provides("preferences")
@@ -14,7 +14,7 @@ init -1 python:
 
     config.locked = False
     config.time_format = "%b %d, %H:%M"
-    config.file_entry_format = "" 
+    config.file_entry_format = ""
     config.preferences = { }
     config.all_preferences = { }
     config.minimumvolume = -10.0
@@ -35,9 +35,9 @@ init 1:
 
     $ config.searchpath.append('archived')
     $ config.developer = False
-    $ config.window_title = u"" 
+    $ config.window_title = u""
     $ multipersistent = MultiPersistent("actual.katawa-shoujo.com")
-    $ release_is_demo = False 
+    $ release_is_demo = False
 
     $ config.has_autosave = False
     $ config.nvl_show_display_say = say_wrapper
@@ -150,7 +150,7 @@ init 1:
         use_new_sprites = False
 
         def make_sprite_path(char, expr, suffix='', close=False):
-            
+
             if suffix:
                 suffix = '_' + suffix
             close_dir = '/'
@@ -158,29 +158,29 @@ init 1:
             if close:
                 close_dir = '/close/'
                 close_mod = '_close'
-            
+
             return 'sprites/' + char + close_dir + char + '_' + expr + suffix + close_mod + '.png'
 
         def ks_sprite(char, expr_name, suffix_list=[]):
-            
+
             missingsprite = 'sprites/others/generic_missing.png'
-            
-            
+
+
             regular_files = [(make_sprite_path(char,expr_name),expr_name),
                              (make_sprite_path(char,expr_name,close=True),expr_name+'_close')]
-            
-            
-            
+
+
+
             for suffix in suffix_list:
                 regular_files.append((make_sprite_path(char,expr_name, suffix),expr_name+'_'+suffix))
                 regular_files.append((make_sprite_path(char,expr_name,suffix,True),expr_name+'_'+suffix+'_close'))
-            
-            
-            
+
+
+
             for filename, mod_expr_name in regular_files:
                 if not renpy.loadable(filename):
                     continue
-                
+
                 else:
                     checked_filename = filename
                 renpy.image((char,mod_expr_name), checked_filename)
@@ -188,16 +188,16 @@ init 1:
                     renpy.image((char,mod_expr_name+"_"+filtersuffix), filter(checked_filename))
 
         def make_sprites(char, expr_list, suffix_list=[]):
-            
+
             if use_new_sprites:
                 return
-            
+
             alpha_done = {'close':False,'regular':False}
-            
+
             for expr in expr_list:
                 ks_sprite(char, expr, suffix_list)
-                
-                
+
+
                 for distance in ('close', 'regular'):
                     if not alpha_done[distance]:
                         is_close = False
@@ -226,30 +226,30 @@ init 1:
             return im.AlphaMask(im.Crop(file,0,0,width/2,height),im.Crop(file,width/2,0,width/2,height))
 
         def sjpg_set(basechar, expressions, defoffset=None, defoffset_close=None, suffix_list=None, alias=None):
-            
+
             if not use_new_sprites:
                 return
-            
+
             basefolder = 'jsprites/'
             invis_set = {'close':False,'regular':False}
             char = basechar
-            
+
             if not isinstance(expressions, dict):
                 expressions = {'':(expressions,defoffset,defoffset_close)}
-            
+
             if not suffix_list:
                 suffix_list = ['']
             else:
                 suffix_list.append('')
             if alias:
                 char, suffix_list = alias
-            
+
             for pose, metadata in expressions.iteritems():
                 baseoffset_close = None
                 baseoffset = None
                 if isinstance(metadata, list):
                     expr_list = metadata
-                
+
                 elif len(metadata) == 3:
                     expr_list, baseoffset, baseoffset_close = metadata
                 else:
@@ -257,7 +257,7 @@ init 1:
                 distance_list = ['regular']
                 if baseoffset_close:
                     distance_list.append('close')
-                
+
                 pose_disp = ''
                 if pose:
                     pose_disp = pose + '_'
@@ -284,7 +284,7 @@ init 1:
                             can_dynamic = True
                         else:
                             invisfile = basefile
-                        
+
                         expr_checked = []
                         for expr in expr_list:
                             expr_static = folder + basechar + pose + '_' + expr + suffix_path + name_mod + '.png'
@@ -301,11 +301,11 @@ init 1:
                                 expr_checked.append((expr,"comp"))
                         if not len(expr_checked):
                             continue
-                        
+
                         if not invis_set[distance]:
                             sjpg_image((char,'invis' + name_mod), im.Alpha(invisfile, 0.0))
                             invis_set[distance] = True
-                        
+
                         for expr, is_static in expr_checked:
                             if is_static == "comp":
                                 expr_comp = folder + basechar + pose + '_' + expr + name_mod + '_COMP.jpg'
@@ -315,26 +315,26 @@ init 1:
                                 curr_disp = im.AlphaMask(curr_comp,alphafile)
                             elif is_static == "png":
                                 curr_disp = folder + basechar + pose + '_' + expr + suffix_path + name_mod + '.png'
-                            else: 
+                            else:
                                 curr_disp = load_sjpg(folder + basechar + pose + '_' + expr + suffix_path + name_mod + '.a.jpg')
                             sjpg_image((char,pose_disp+expr+suffix+name_mod), curr_disp)
                             for filter, filtersuffix in sp_filters:
                                 sjpg_image((char,pose_disp+expr+suffix+name_mod+'_'+filtersuffix), filter(curr_disp))
 
         def sjpg_image(alias, what):
-            
+
             renpy.image(alias, what)
 
 
 
 
         def ks_bg(bgid):
-            
+
             path = "bgs/"
             tag = "bg"
-            
+
             base_image = path + bgid + ".jpg"
-            
+
             if not renpy.loadable(base_image):
                 base_image = "bgs/_bg_missing.png"
             renpy.image((tag,bgid), base_image)
@@ -576,12 +576,12 @@ init 1:
 
         def tremble_general(time, xpos, ypos, xanchor, yanchor, d, st, at):
             import math, random
-            
+
             if not time:
                 n = st - int(st)
             else:
                 n = scaled_runtime(time, st)
-            
+
             jitter = 0.0002 * (random.randint(-1,1))
             m = math.sin(n*math.pi*40) * 0.001 + jitter
             d.xanchor = xanchor
@@ -2437,7 +2437,7 @@ init 1:
     image lilly superclose_shock = "vfx/lilly_superclose_shock.png"
 
 
-    image blanknote = "vfx/note_blur.png" 
+    image blanknote = "vfx/note_blur.png"
 
     image lillyprop back_cane = "vfx/prop_lilly_back_cane.png"
     image lillyprop back_cane_close = "vfx/prop_lilly_back_cane_close.png"
@@ -2792,7 +2792,7 @@ init python:
 
 
 
-    config.nvl_page_ctc = anim.Filmstrip("ui/ctc_strip.png", (16,16), (8,8), 0.03, ypos=560, xpos=772) 
+    config.nvl_page_ctc = anim.Filmstrip("ui/ctc_strip.png", (16,16), (8,8), 0.03, ypos=560, xpos=772)
     config.nvl_page_ctc_position = "fixed"
 
 
@@ -2812,12 +2812,12 @@ init python:
     def quotefixer(who, what, **kwargs):
         return say_wrapper(who, change_quotes(what), **kwargs)
 
-    def define_characters(): 
-        
+    def define_characters():
+
         add_styles = prefix_dict(displayStrings.styleoverrides, prefix="what_", combine=True)
-        
-        
-        
+
+
+
         store.adv = ReadbackADVCharacter(name=None,
                                          ctc=config.nvl_page_ctc,
                                          ctc_position = "fixed",
@@ -2825,23 +2825,23 @@ init python:
                                          what_prefix=displayStrings.quote_outer_open,
                                          what_suffix=displayStrings.quote_outer_close,
                                          **add_styles)
-        
+
         store.name_only = Character(None, kind=adv)
-        
-        
-        
+
+
+
         store.hi = Character(displayStrings.name_hi, color="#629276")
-        
+
         store.ha = Character(displayStrings.name_ha, color="#897CBF")
         store.emi = Character(displayStrings.name_emi, color = "#FF8D7C")
         store.rin = Character(displayStrings.name_rin, color = "#b14343")
         store.li = Character(displayStrings.name_li, color="#F9EAA0")
         store.shi = Character(displayStrings.name_shi, color="#72ADEE")
         store.mi = Character(displayStrings.name_mi, color="#FF809F")
-        
+
         store.mi_shi = Character(displayStrings.name_shi, color="#FF809F")
         store.mi_not_shi = Character("{s}"+displayStrings.name_shi+"{/s} "+displayStrings.name_mi, color="#FF809F")
-        
+
         store.ke = Character(displayStrings.name_ke, color="#CC7C2A")
         store.mu = Character(displayStrings.name_mu, color = "#FFFFFF")
         store.nk = Character(displayStrings.name_nk, color = "#FFFFFF")
@@ -2854,15 +2854,15 @@ init python:
         store.emm = Character(displayStrings.name_emm, color="#995050")
         store.sk = Character(displayStrings.name_sk, color="#7187A8")
         store.mk = Character(displayStrings.name_mk, color="#AD735E")
-        
+
         store.mystery = Character(displayStrings.name_mystery)
-        
-        
-        
+
+
+
         store.ssh = Character(displayStrings.name_shi, kind=shi, what_prefix=u"[", what_suffix=u"]")
         store.his = Character(displayStrings.name_hi, kind=hi, what_prefix=u"[", what_suffix=u"]")
-        
-        
+
+
         store.ha_ = Character(displayStrings.name_ha_, kind=ha)
         store.emi_ = Character(displayStrings.name_emi_, kind=emi)
         store.rin_ = Character(displayStrings.name_rin_, kind=rin)
@@ -2878,10 +2878,10 @@ init python:
         store.hx_ = Character(displayStrings.name_hx_, kind=hx)
         store.hh_ = Character(displayStrings.name_hh_, kind=hh)
         store.emm_ = Character(displayStrings.name_emm_, kind=emm)
-        
-        
-        
-        
+
+
+
+
         store.n = ReadbackNVLCharacter(None,
                                        kind=nvl,
                                        ctc=anim.Blink(im.Rotozoom("ui/ctc.png", 270, 1.0),
@@ -2889,7 +2889,7 @@ init python:
                                        xoffset=-50, yoffset=-70),
                                        ctc_position = "fixed",
                                        **add_styles)
-        
+
         store.nb = Character(None,
                                kind=adv,
                                ctc=None,
@@ -2899,17 +2899,17 @@ init python:
                                what_suffix="",
                                show_function=say_wrapper,
                                window_style="b_nvl_window")
-        
+
         store.rinbabble = Character(None,
                                     kind=n,
                                     what_prefix=u"{color=#FF8D7C}{b}"+displayStrings.name_rin+"{/b}{/color}\n" + displayStrings.quote_outer_open,
                                     what_suffix=displayStrings.quote_outer_close)
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         store.narrator = Character(' ', what_prefix="", what_suffix="", show_function=say_wrapper)
         store.centered = Character(None, what_style="centered_text", window_style="centered_window", what_prefix="", what_suffix="", show_function=say_wrapper)
         store.centered_b = Character(None, kind=centered, what_color="#666666", what_drop_shadow=None, what_style="alive_text")
@@ -2970,7 +2970,7 @@ init python:
 
 
 
-    menueffect = None 
+    menueffect = None
     charaenter = dissolve
     charaexit = dissolve
     charachange = dissolve
@@ -3006,7 +3006,7 @@ init python:
     ks_music("Daylight", "daily")
     ks_music("Ease", "ease")
     ks_music("Everyday_Fantasy", "another")
-    ks_music("Friendship", "friendship") 
+    ks_music("Friendship", "friendship")
     ks_music("Fripperies", "happiness")
     ks_music("Generic_Happy_Music", "comedy")
     ks_music("High_Tension", "tension")
@@ -3146,19 +3146,19 @@ init python:
     config.has_music = True
     config.has_voice = False
 
-    config.skip_indicator = False 
+    config.skip_indicator = False
 
     config.window_icon = "ui/icon.png"
-    
+
     config.thumbnail_width = 123
     config.thumbnail_height = 93
-    
+
     config.enter_transition = dotwipe_down
     config.exit_transition = dotwipe_up
     config.intra_transition = dissolve
     config.main_game_transition = dotwipe_down
     config.game_main_transition = dotwipe_up
-    config.end_splash_transition = None 
+    config.end_splash_transition = None
     config.end_game_transition = dotwipe_up
     config.after_load_transition = dotwipe_up
 
@@ -3189,9 +3189,9 @@ init python:
 
 
 
-    def ib_base(image, **options): 
+    def ib_base(image, **options):
         return im.MatrixColor(image, im.matrix.opacity(0.4), **options)
-    def ib_disabled(image, **options): 
+    def ib_disabled(image, **options):
         return im.MatrixColor(image, im.matrix.opacity(0.1), **options)
 
 
@@ -3199,12 +3199,12 @@ init python:
 
 
     def main_menu_composer(is_animated):
-        
+
         if is_animated and store.animate_mm:
             is_animated = True
         else:
             is_animated = False
-        
+
         widget_map = [('tc_act4_shizune', (1219, 554), '16_tc4-shizune.png'),
                       ('tc_act3_shizune', (1126, 689), '15_tc3-shizune.png'),
                       ('tc_act2_shizune', (1116, 857), '14_tc2-shizune.png'),
@@ -3250,7 +3250,7 @@ init python:
     style.mm_menu_frame.background = None
 
     style.mm_menu_frame.xanchor = 0.0
-    style.mm_menu_frame.yanchor = 1.0 
+    style.mm_menu_frame.yanchor = 1.0
     style.mm_menu_frame.xpos = 125
 
     style.mm_menu_frame.ypos = 975
@@ -3278,7 +3278,7 @@ init python:
 
     style.say_window.background = "ui/bg-say.png"
     style.say_window.left_padding = 14
-    style.say_window.right_padding = 30                             
+    style.say_window.right_padding = 30
 
     style.say_window.top_padding = 18
     style.say_window.xmargin = 0
@@ -3335,7 +3335,7 @@ init python:
 
     style.menu_choice_button.background = "ui/bg-choice.png"
     style.menu_choice.take(style.mm_button_text)
-    style.menu_choice.xalign = 0.5                         
+    style.menu_choice.xalign = 0.5
     style.menu_choice.size = 20
     style.menu_choice_button.top_padding = 5
 
@@ -3366,7 +3366,7 @@ init python:
 
 
     style.gm_root.background = Solid("#0000007F")
-    style.gm_root[None].background = None 
+    style.gm_root[None].background = None
     style.gm_nav_frame.xalign = 0.5
     style.gm_nav_frame.yalign = 0.4
     style.gm_nav_frame.xminimum= 360
@@ -3412,7 +3412,7 @@ init python:
 
     style.yesno_frame.xalign = 0.5
     style.yesno_frame.yalign = 0.5
-    style.yesno_frame.xmaximum = 596 
+    style.yesno_frame.xmaximum = 596
 
     style.yesno_frame.xmargin = 0
     style.yesno_frame.background = "ui/bg-popup.png"
@@ -3659,7 +3659,7 @@ init python:
 
 
     def init_vars():
-        
+
         store.attraction_fail = 0
         store.attraction_sc = 0
         store.attraction_lilly = 0
