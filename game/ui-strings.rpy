@@ -56,7 +56,7 @@ init -3 python:
 
     displayDict["en"].return_button_text = u"Return"
 
-    displayDict["en"].hdisabled_label = u"Disable adult content"
+    displayDict["en"].hdisabled_label = u"    Disable adult content"
     displayDict["en"].config_page_caption = u"Options"
     displayDict["en"].config_fullscreen_label = u'Fullscreen mode'
     displayDict["en"].config_transitions_label = u'Disable transitions'

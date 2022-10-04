@@ -774,10 +774,10 @@ label scene_select_loop:
                 checkboximage = "ui/bt-cf-unchecked.png"
             else:
                 checkboximage = "ui/bt-cf-checked.png"
-            widget_button(displayStrings.scene_playthrough_label, checkboximage, toggle_playthrough, xsize=340, widgetyoffset=0, xpos=180, ypos=450)
+            widget_button(displayStrings.scene_playthrough_label, checkboximage, toggle_playthrough, xsize=340, widgetyoffset=0, xpos=340, ypos=810)
         else:
             completion_percentage = get_completion_percentage()
-            ui.text(displayStrings.scene_completion_label % completion_percentage, style="prefs_label", xpos=180, ypos=450)
+            ui.text(displayStrings.scene_completion_label % completion_percentage, style="prefs_label", xpos=340, ypos=810)
 
         ui.add(DynamicDisplayable(refresh_label))
 
