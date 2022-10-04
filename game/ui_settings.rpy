@@ -2792,7 +2792,7 @@ init python:
 
 
 
-    config.nvl_page_ctc = anim.Filmstrip("ui/ctc_strip.png", (16,16), (8,8), 0.03, ypos=560, xpos=772)
+    config.nvl_page_ctc = anim.Blink("ui/ctc.png", offset=1.5, pos=(1.0, 1.0), xoffset=-50, yoffset=-70)
     config.nvl_page_ctc_position = "fixed"
 
 
@@ -2885,6 +2885,7 @@ init python:
         store.n = ReadbackNVLCharacter(None,
                                        kind=nvl,
                                        ctc=anim.Blink(im.Rotozoom("ui/ctc.png", 270, 1.0),
+                                       offset=1.5,
                                        pos=(1.0, 1.0),
                                        xoffset=-50, yoffset=-70),
                                        ctc_position = "fixed",
