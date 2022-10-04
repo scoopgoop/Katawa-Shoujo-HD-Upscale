@@ -220,7 +220,7 @@ label prefs_screen:
         prefs_looped = False 
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
 
-        group_spacing = 36
+        group_spacing = 30
 
         ui.vbox(xpos = 324, ypos = 216)
         ui.text(displayStrings.config_page_caption, style="page_caption")
@@ -238,11 +238,12 @@ label prefs_screen:
         fullscreen_p.render_preference(disabled=disallow_fullscreen)
         ui.null(height=group_spacing)
         unreadskip_p.render_preference()
-        choiceskip_p.render_preference()
         ui.null(height=group_spacing)
+        choiceskip_p.render_preference()
+        ui.null(height=54)
         textspeed_p.render_preference()
         afm_p.render_preference()
-        ui.null(height=group_spacing)
+        ui.null(height=10)
         musicvol_p.render_preference()
         ui.hbox()
         sfxvol_p.render_preference()
