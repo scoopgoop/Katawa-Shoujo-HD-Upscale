@@ -83,18 +83,18 @@ label text_history_gm:
         else:
             lines_to_show = readback_buffer
 
-        ui.vbox(xpos=180, ypos=120, background=None)
+        ui.vbox(xpos=324, ypos = 216, background=None)
         ui.text(displayStrings.text_history_caption, style="page_caption")
         ui.hbox(xpos=0)
-        vp = ui.viewport(yadjustment=yadj, offsets=(0.0,1.0), mousewheel=False, draggable=False, xmaximum=415, ymaximum = 296, xalign=0.5, yalign=0.5)
+        vp = ui.viewport(yadjustment=yadj, offsets=(0.0,1.0), mousewheel=False, draggable=False, xmaximum=747, ymaximum = 533, xalign=0.5, yalign=0.5)
         ui.vbox(xfill=True)
         for line in lines_to_show:
             if line[0] and line[0] != " ":
                 ui.text(line[0], style="readback_label", **displayStrings.styleoverrides)
             ui.text(line[1], style="readback_text", **displayStrings.styleoverrides)
-            ui.null(height=10)
+            ui.null(height=18)
         ui.close()
-        ui.null(width=10)
+        ui.null(width=18)
         ui.vbox()
         ui.imagebutton(ib_base("ui/bt-vscrollup.png"), "ui/bt-vscrollup.png", clicked=decrease_rb_yoffset)
         ui.bar(adjustment=yadj, style='vscrollbar')
@@ -220,19 +220,19 @@ label prefs_screen:
         prefs_looped = False 
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
 
-        group_spacing = 8
+        group_spacing = 36
 
         ui.vbox(xpos = 324, ypos = 216)
         ui.text(displayStrings.config_page_caption, style="page_caption")
-        ui.null(height=8)
+        ui.null(height=15)
         ui.hbox()
-        ui.null(width=20)
+        ui.null(width=36)
         ui.vbox()
         if not persistent.hdisabled:
             checkboximage = "ui/bt-cf-unchecked.png"
         else:
             checkboximage = "ui/bt-cf-checked.png"
-        widget_button(displayStrings.hdisabled_label, checkboximage, toggle_h, xsize=300, widgetyoffset=0)
+        widget_button(displayStrings.hdisabled_label, checkboximage, toggle_h, xsize=540, widgetyoffset=0)
         ui.null(height=group_spacing)
 
         fullscreen_p.render_preference(disabled=disallow_fullscreen)
@@ -246,14 +246,14 @@ label prefs_screen:
         musicvol_p.render_preference()
         ui.hbox()
         sfxvol_p.render_preference()
-        ui.null(width=20)
+        ui.null(width=36)
         widget_button(displayStrings.config_sfxtest_label, "ui/bt-musicplay.png", test_sound)
 
         ui.close()
         ui.null(height=group_spacing)
-        widget_button(displayStrings.config_language_sel, "ui/bt-language.png", ui.jumps("language_screen"), xsize=300, widgetyoffset=3)
+        widget_button(displayStrings.config_language_sel, "ui/bt-language.png", ui.jumps("language_screen"), xsize=540, widgetyoffset=5)
         if renpy.display.joystick.enabled: 
-            widget_button(displayStrings.config_gamepad_label, "ui/bt-gamepad.png", ui.jumps("joystick_screen"), xsize=300, widgetyoffset=3)
+            widget_button(displayStrings.config_gamepad_label, "ui/bt-gamepad.png", ui.jumps("joystick_screen"), xsize=540, widgetyoffset=5)
 
 
         ui.close()
@@ -636,7 +636,7 @@ label music_menu_loop:
 
         ui.hbox(xpos=324, ypos=800)
         musicvol_p_jukebox.render_preference()
-        ui.null(width=20)
+        ui.null(width=36)
         widget_button(displayStrings.music_stop_button_text, "ui/bt-musicstop.png", clicked=ui.returns(("", "")), xsize=144)
         ui.close()
 

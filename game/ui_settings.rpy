@@ -3343,7 +3343,7 @@ init python:
     style.hyperlink_text.underline = False
 
     style.create("readback_text", "say_dialogue")
-    style.readback_text.size= 16
+    style.readback_text.size= 29
     style.readback_text.color = "#00000066"
     style.create("readback_label", "readback_text")
     style.readback_label.bold = True
@@ -3477,10 +3477,10 @@ init python:
     style.file_picker_entry.top_padding = 3
 
     style.vscrollbar.thumb_offset = -10
-    style.vscrollbar.ymaximum = 250
-    style.vscrollbar.xmaximum = 24
-    style.vscrollbar.top_gutter = 15
-    style.vscrollbar.bottom_gutter = 14
+    style.vscrollbar.ymaximum = 450
+    style.vscrollbar.xmaximum = 44
+    style.vscrollbar.top_gutter = 27
+    style.vscrollbar.bottom_gutter = 25
     style.vscrollbar.top_bar = ib_base("ui/bt-vscrollbar.png")
     style.vscrollbar.hover_top_bar = "ui/bt-vscrollbar.png"
     style.vscrollbar.bottom_bar = ib_base("ui/bt-vscrollbar.png")
@@ -3605,9 +3605,10 @@ init python:
     style.prefs_slider.hover_right_bar = "ui/bt-cf-bar-right.png"
     style.prefs_slider.thumb = ib_base("ui/bt-cf-thumb.png")
     style.prefs_slider.hover_thumb = "ui/bt-cf-thumb.png"
-    style.prefs_slider.left_gutter = 12
-    style.prefs_slider.right_gutter = 12
-    style.prefs_slider.xmaximum = 200
+    style.prefs_slider.left_gutter = 22
+    style.prefs_slider.right_gutter = 22
+    style.prefs_slider.xmaximum = 360
+    style.prefs_slider.ymaximum = 50
     style.prefs_slider.thumb_offset = -3
 
     style.create("page_caption", "prefs_label")
