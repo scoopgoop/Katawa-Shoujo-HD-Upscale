@@ -86,7 +86,7 @@ init -1 python:
             renpy.game_menu('image_key')
 
     def additional_keys():
-        
+
         ui.keymap(a=turn_afm_on)
         ui.keymap(t=go_history)
         ui.keymap(K_F2=go_load)
@@ -120,26 +120,26 @@ init -1 python:
         A transition that does nothing but play a sound.
         To be used in MultipleTransitions, obviously.
         """
-        
+
         def __init__(self, sound, time=0.0001, channel="sound", old_widget=None, new_widget=None, **properties):
             super(SoundTransitionClassCompat, self).__init__(time, **properties)
-            
+
             self.time = time
             self.old_widget = old_widget
             self.new_widget = new_widget
             self.events = False
             self.sound = sound
             self.channel = channel
-        
+
         def render(self, width, height, st, at):
-            
+
             if st >= self.time:
                 self.events = True
                 return render(self.new_widget, width, height, st, at)
-            
+
             if st < self.time:
                 renpy.display.render.redraw(self, 0)
-            
+
             renpy.sound.play(self.sound, channel=self.channel)
             return renpy.display.render.Render(width, height, opaque=True)
 
@@ -149,7 +149,7 @@ init -1 python:
         return disp.load().get_size()
 
     def quasiblur(disp_in, factor, bilinear_out=True, bilinear_in=True):
-        
+
         disp_down = im.FactorScale(disp_in, width=1.0/factor, bilinear=bilinear_in)
         if bilinear_out:
             in_w, in_h = disp_size(disp_in)
@@ -166,21 +166,21 @@ init -1 python:
         """
         def __init__(self, sound, delay=0.0001, channel="sound", old_widget=None, new_widget=None, **properties):
             super(SoundTransitionClassGL, self).__init__(delay, **properties)
-            
+
             self.old_widget = old_widget
             self.new_widget = new_widget
             self.events = True
-            
+
             self.sound = sound
             self.channel = channel
             self.played = False
-        
+
         def render(self, width, height, st, at):
-            
+
             if not self.played:
                 renpy.sound.play(self.sound, channel=self.channel)
                 self.played = True
-            
+
             return renpy.display.transition.null_render(self, width, height, st, at)
 
     if is_glrenpy():
@@ -242,10 +242,10 @@ init -1 python:
         for i in xrange(n):
             x = (i / n)
             xd = x * 0.75 + 0.125
-            
-            
-            
-            
+
+
+
+
             y = 1.0 - acdc_warp(x)
             renpy.show("dot", tag="test"+str(i), at_list=[Position(xpos=xd, ypos=y)])
 
@@ -273,7 +273,7 @@ init 2 python:
     automode = False
     notextmode = False
     config.auto_choice_delay = None
-    nongamemenus = 0 
+    nongamemenus = 0
 
     def autosave_metabuilder():
         if save_name:
@@ -305,7 +305,7 @@ init 2 python:
         current_line = (preparse_say_for_store(who), preparse_say_for_store(what))
 
     import re
-    remove_tags_expr = re.compile(r'{nw}|{image=.*?}|{/image}|{color=.*?}|{/color}|{a=.*?}|{/a}|{font=.*?}|{/font}|{size=.*?}|{/size}') 
+    remove_tags_expr = re.compile(r'{nw}|{image=.*?}|{/image}|{color=.*?}|{/color}|{a=.*?}|{/a}|{font=.*?}|{/font}|{size=.*?}|{/size}')
     def preparse_say_for_store(input):
         global remove_tags_expr
         if input:
@@ -327,15 +327,15 @@ init 2 python:
 
 
     def increase_rb_yoffset():
-        
+
         store_rb_yoffset(yadj.get_value() + 50)
 
     def decrease_rb_yoffset():
-        
+
         store_rb_yoffset(yadj.get_value() - 50)
 
     def store_rb_yoffset(input):
-        
+
         yadj.change(input)
 
     def wdt_on(do_with=True, trans=None):
@@ -358,7 +358,7 @@ init 2 python:
         store.tl_notes[id] = (author, text)
 
     def display_tl_note(new_tl_note_id=None):
-        
+
         global tl_note, tl_note_id, tl_notes
         if new_tl_note_id != tl_note_id:
             tl_note_id = new_tl_note_id
@@ -369,7 +369,7 @@ init 2 python:
             renpy.restart_interaction()
 
     def tl_note_overlay():
-        
+
         global tl_note
         if tl_note and not config.skipping and _preferences.afm_time <= 0:
             ui.frame(style="comment_frame")
@@ -392,14 +392,14 @@ init 2 python:
 
 
     def tl_dismiss(a):
-        
+
         display_tl_note()
         return True
 
     import re
     rh_expr = re.compile(r'{a=.*?}|{/a}')
     def remove_hyperlinks(input):
-        
+
         global rh_expr
         if not persistent.commentary_on:
             return re.sub(rh_expr, "", input)
@@ -414,7 +414,7 @@ init 2 python:
 
 
     def viewportkeys(upfunc, downfunc):
-        
+
         ui.add(renpy.Keymap(mousedown_4=upfunc))
         ui.add(renpy.Keymap(K_PAGEUP=upfunc))
         ui.add(renpy.Keymap(mousedown_5=downfunc))
@@ -450,11 +450,11 @@ init 2 python:
         return make_percentage(seen, total, 0)
 
     def get_available_scenes(filter=False, include_locked=False, exclude_hidden=False, include_acts=False):
-        
+
         available_scenes = []
         for (name, label, display, path) in s_scenes:
-            if (renpy.has_label(label) and display) or (include_acts and label == rp_actmark): 
-                if not filter or filter == path or (isinstance(path, tuple) and filter in path): 
+            if (renpy.has_label(label) and display) or (include_acts and label == rp_actmark):
+                if not filter or filter == path or (isinstance(path, tuple) and filter in path):
                     unlocked = False
                     if (persistent_seen(label) or has_devlvl()) and not exclude_hidden:
                         unlocked = True
@@ -466,7 +466,7 @@ init 2 python:
             return False
 
     def get_available_images():
-        
+
         global ex_g_images
         available_images = []
         for thumb in ex_g_images:
@@ -483,13 +483,13 @@ init 2 python:
             return False
 
     def get_available_music():
-        
+
         global ex_m_tracks
         available_music = []
         for title, filename in ex_m_tracks:
             if renpy.seen_audio(filename) or has_devlvl():
                 available_music.append(filename)
-        if len(available_music) > 1: 
+        if len(available_music) > 1:
             return available_music
         else:
             return False
@@ -528,7 +528,7 @@ init 2 python:
 
 
     def widget_button(text,displayable,clicked=None,style='prefs_label',xsize=220,ysize=30,widgetyoffset=3,textxoffset=30,state="button", xpos=0, ypos=0):
-        
+
         textbase = Text(text, style=style)
         texthover = Text(text, style=style, color="#000")
         textdisabled = Text(text, style=style, color="#00000019")
@@ -560,7 +560,7 @@ init 2 python:
 
 
     def time_from_seconds(seconds):
-        
+
         mins, secs = divmod(int(float(seconds)), 60)
         hours, minutes = divmod(mins, 60)
         playhours = str(hours)
@@ -571,23 +571,23 @@ init 2 python:
         return playhours+":"+playminutes
 
     def custom_render_savefile(index, name, filename, extra_info, screenshot, mtime, newest, clickable, has_delete, **positions):
-        
+
         if clickable:
             clicked = ui.returns((filename, True))
         else:
             clicked = None
-        
+
         info_split = extra_info.split("#")
         scene_name = name_from_label(info_split[0])
         if len(info_split) > 1:
             playtime = time_from_seconds(info_split[1])
         else:
             playtime = "x:xx"
-        
+
         if is_autosave(name):
-            
+
             name = name[5:]
-        
+
         ui.vbox()
         ui.hbox()
         ui.button(style=style.file_picker_entry[index],
@@ -595,17 +595,17 @@ init 2 python:
                   **positions)
         ui.hbox(style=style.file_picker_entry_box[index])
         ui.add(screenshot)
-        
+
         ui.null(width=10)
-        
-        
+
+
         headstyle_o = ""
         headstyle_c = ""
         if newest:
             headstyle_o = "{b}"
             headstyle_c = "{/b}"
-        
-        
+
+
         s = config.file_entry_format % dict(
             time=headstyle_o+renpy.time.strftime(config.time_format,
                                      renpy.time.localtime(mtime))+headstyle_c,
@@ -627,7 +627,7 @@ init 2 python:
         return False
 
     def custom_file_picker(selected, save, mode="manual", background = None):
-        
+
         global auto_offset, displayed_slots
         saved_games = renpy.list_saved_games(regexp=r'(auto-|quick-)?[0-9]+')
         newest = None
@@ -644,7 +644,7 @@ init 2 python:
             elif is_autosave(fn) and mtime > newest_automtime:
                 newest_auto = fn
                 newest_automtime = mtime
-        
+
         def save_slot_sort(in_1, in_2):
             if len(in_1[0]) > len(in_2[0]):
                 return 1
@@ -656,22 +656,22 @@ init 2 python:
                 return -1
             else:
                 return 0
-        
-        
+
+
         while True:
-            
+
             displayed_manual = []
             displayed_auto = []
-            
+
             for fn, extra_info, screenshot, mtime in saved_games:
                 if not is_autosave(fn):
                     displayed_manual.append((fn, fn, False))
                 else:
                     displayed_auto.append((fn, fn, True))
-            
+
             if len(displayed_manual) < 1 and len(displayed_auto) > 0:
                 mode = "auto"
-            
+
             if mode == "auto" and not selected == "save":
                 displayed_slots = displayed_auto
                 newest = newest_auto
@@ -679,36 +679,36 @@ init 2 python:
             else:
                 displayed_slots = displayed_manual
                 has_delete = True
-            
+
             displayed_slots.sort(cmp=save_slot_sort)
-            
+
             scrollable = False
             if len(displayed_slots) > 5:
                 scrollable = True
-            
+
             if scrollable:
                 auto_offset = 1.0 / (len(displayed_slots) - 5)
-                
+
                 auto_offset = 106
             else:
                 auto_offset = 0
-            
+
             if background:
                 ui.image(background)
             layout.navigation(None)
-            
+
             ui.window(style='file_picker_frame', xminimum=856)
-            
-            ui.vbox() 
-            
+
+            ui.vbox()
+
             if selected == "save":
                 ui.text(displayStrings.save_page_caption, style="page_caption")
             else:
                 ui.text(displayStrings.load_page_caption, style="page_caption")
-            
+
             def entry(name, filename, offset, ro):
                 place = positions.get("entry_" + str(offset + 1), { })
-                
+
                 if filename not in save_info:
                     clickable = save and not ro
                     _render_new_slot(offset, name, filename, clickable, **place)
@@ -716,7 +716,7 @@ init 2 python:
                     clickable = not save or not ro
                     extra_info, screenshot, mtime = save_info[filename]
                     custom_render_savefile(offset, name, filename, extra_info, screenshot, mtime, newest == filename, clickable, has_delete, **place)
-            
+
             def store_yoffset(input=persistent.fpicker_yoffset):
                 global auto_offset, displayed_slots
                 maxheight = auto_offset * (len(displayed_slots) - 5)
@@ -726,33 +726,33 @@ init 2 python:
                     input = 0
                 persistent.fpicker_yoffset = input
                 yadj.change(input)
-            
+
             def increase_yoffset():
                 global auto_offset
                 store_yoffset(persistent.fpicker_yoffset + auto_offset)
-            
+
             def decrease_yoffset():
                 global auto_offset
                 store_yoffset(persistent.fpicker_yoffset - auto_offset)
-            
+
             if not persistent.fpicker_yoffset:
                 persistent.fpicker_yoffset = 0.0
             elif persistent.fpicker_yoffset > auto_offset * (len(displayed_slots) - 5) or persistent.fpicker_yoffset == -1:
                 persistent.fpicker_yoffset = auto_offset * (len(displayed_slots) - 5)
-            
+
             yadj = ui.adjustment(range=auto_offset * (len(displayed_slots) - 5), value=persistent.fpicker_yoffset, changed=store_yoffset)
             vp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=720, ymaximum = 533, xpos=0, ypos = 2)
             ui.vbox(xfill=True)
-            
+
             maxname = 0
-            
+
             for i, (filename, name, ro) in enumerate(displayed_slots):
                 entry(name, filename, i, ro)
                 maxname = name
-            
-            ui.close() 
-            ui.close() 
-            
+
+            ui.close()
+            ui.close()
+
             ui.vbox(xpos = 1080, yalign=0.493, box_spacing=2)
             if scrollable:
                 ui.imagebutton(ib_base("ui/bt-vscrollup.png"), "ui/bt-vscrollup.png", clicked=decrease_yoffset)
@@ -765,12 +765,12 @@ init 2 python:
             ui.close()
             if selected == "save":
                 nextsaveslot=1
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
                 nextsaveslot = int(maxname) + 1
                 widget_button(displayStrings.new_save_button, "ui/bt-star.png", ui.returns((str(nextsaveslot),False)), xsize=612, widgetyoffset=0, xpos=324, ypos=810)
             elif config.has_autosave:
@@ -782,40 +782,40 @@ init 2 python:
                 clicked_manual_b = ui.returns(("_setmode", "manual"))
                 if len(displayed_manual) < 1:
                     clicked_manual_b = None
-                
+
                 if mode == "auto":
                     style_auto_b = "rpa_active"
                     clicked_auto_b = None
                 else:
                     style_manual_b = "rpa_active"
                     clicked_manual_b = None
-                
+
                 ui.hbox(xpos=324, ypos=810)
                 layout.button(displayStrings.show_manual_saves, style_manual_b, clicked=clicked_manual_b)
                 layout.button(displayStrings.show_auto_saves, style_auto_b, clicked=clicked_auto_b)
                 ui.close()
-            
+
             return_button(ui.returns(("return","return")))
-            
+
             viewportkeys(decrease_yoffset,increase_yoffset)
-            
+
             value = ui.interact()
             return value
 
 
     def automode_f():
-        
-        
+
+
         def clicked():
             _preferences.afm_time = 0
-            config.skipping = None 
-            renpy.restart_interaction() 
-        
-        
+            config.skipping = None
+            renpy.restart_interaction()
+
+
         if _preferences.afm_time == 0:
             return
         elif renpy.current_interact_type() != "menu":
-            
+
             ui.add(renpy.Keymap(dismiss=clicked))
             ui.add(renpy.Keymap(rollforward=clicked))
             ui.add(renpy.Keymap(rollback=clicked))
@@ -844,7 +844,7 @@ init 2 python:
 
 
     def _prompt(screen, message, image=None, isyesno = False, background=None, transition=config.intra_transition, interact = True):
-        
+
         renpy.transition(transition)
         layout.navigation(screen)
         if background:
@@ -874,7 +874,7 @@ init 2 python:
         return rv
 
     def _yesno_prompt(screen, message, image=None, background=None, transition=config.intra_transition):
-        
+
         return _prompt(screen, message, image=image, isyesno = True, background=background, transition=transition)
 
     class TogglePreference(object):
@@ -884,19 +884,19 @@ init 2 python:
         For the original documentation, see the class _Preference in 00preferences.rpy
         """
         def __init__(self, name, field, boolmap=(False,True), base=_preferences):
-            
-            
+
+
             self.name = name
             self.field = field
             self.values = []
             self.boolmap = boolmap
             self.base = base
-            
+
             config.all_preferences[name] = self
-        
+
         def render_preference(self, thisxpos=0, thisypos=0, disabled=False):
             cur = getattr(self.base, self.field)
-            
+
             if cur == self.boolmap[0]:
                 boolCur = False
                 checkboximage = "ui/bt-cf-unchecked.png"
@@ -906,43 +906,43 @@ init 2 python:
             else:
                 boolCur = cur
                 checkboximage = "ui/bt-cf-unchecked.png"
-            
+
             def clicked(value=boolCur):
                 if value == True:
                     writevalue = self.boolmap[0]
                 elif value == False:
                     writevalue = self.boolmap[1]
                 else:
-                    writevalue = value 
-                
+                    writevalue = value
+
                 setattr(self.base, self.field, writevalue)
                 return True
-            
+
             if disabled:
                 widget_button(self.name, checkboximage, clicked, xsize=325, widgetyoffset=0, state="disabled")
             else:
                 widget_button(self.name, checkboximage, clicked, xsize=325, widgetyoffset=0)
 
     class customSliderPreference(object):
-        
+
         def __init__(self, name, range, get, set, enable='True'):
-            
+
             self.name = name
             self.range = range
             self.get = get
             self.set = set
             self.enable = enable
-            
+
             config.all_preferences[name] = self
-        
+
         def render_preference(self, thisxpos=0, thisypos=0):
-            
+
             if not eval(self.enable):
                 return
-            
+
             def changed(v):
                 self.set(v)
-            
+
             ui.hbox()
             ui.bar(self.range,
                    self.get(),
@@ -954,23 +954,23 @@ init 2 python:
 
 
     class customVolumePreference(object):
-        
+
         def __init__(self, name, mixer, enable='True', sound='None', channel=0):
-            
+
             self.name = name
             self.mixer = mixer
             self.enable = enable
             self.sound = sound
             self.channel = channel
             self.steps = 1.0
-            
+
             config.all_preferences[name] = self
-        
+
         def render_preference(self, thisxpos=0, thisypos=0):
-            
+
             if not eval(self.enable):
                 return
-            
+
             def changed(v):
                 if persistent.is_muted:
                     mute_toggle()
@@ -978,7 +978,7 @@ init 2 python:
                 if newvol == 0.0:
                     newvol = config.minimumvolume
                 _preferences.set_volume(self.mixer, newvol)
-            
+
             ui.hbox()
             ui.bar(self.steps,
                    self.get_slider_position(),
@@ -987,16 +987,16 @@ init 2 python:
             ui.null(width=15)
             layout.label(self.name, "prefs")
             ui.close()
-        
+
         def fader_characteristic(self, v):
-            
+
             import math
             return 1.0 - math.cos(v * math.pi / 2.0)
-        
+
         def fader_characteristic_inverse(self,v):
             import math
             return (2.0 / math.pi) * math.acos(1.0 - v)
-        
+
         def get_slider_position(self):
             if persistent.is_muted:
                 vol = persistent.oldvol[self.mixer]
@@ -1008,7 +1008,7 @@ init 2 python:
             return rv
 
     def cps_get():
-        
+
         cps = _preferences.text_cps
         if cps == 0:
             cps = 150
@@ -1017,15 +1017,15 @@ init 2 python:
         return cps
 
     def cps_set(cps):
-        
+
         cps += 1
         if cps == 151:
             cps = 0
         _preferences.text_cps = cps
 
     def afm_get():
-        
-        
+
+
         afm = persistent.afm_time
         afm -= 1
         if afm < 1:
@@ -1033,7 +1033,7 @@ init 2 python:
         return afm
 
     def afm_set(afm):
-        
+
         afm += 1
         if afm > 40:
             afm = 40
@@ -1073,39 +1073,39 @@ init 2 python:
             self.gridsize = gridsize
             self.upperleft = upperleft
             self.offsets = offsets
-        
+
         def __call__(self, imagenum, image_count):
-            
+
             cols, rows = self.gridsize
             ulx, uly = self.upperleft
             ox, oy = self.offsets
-            
+
             return dict(
                 xpos = ulx + (imagenum % cols) * ox,
                 ypos = uly + (imagenum // cols) * oy,
                 )
 
     class GalleryAllPriorCondition(object):
-        
+
         def check(self, all_prior):
             return all_prior
 
     class GalleryArbitraryCondition(object):
         def __init__(self, condition):
             self.condition = condition
-        
+
         def check(self, all_prior):
             return eval(self.condition)
 
     class GalleryUnlockCondition(object):
         def __init__(self, images):
             self.images = images
-        
+
         def check(self, all_prior):
             for i in self.images:
                 if tuple(i.split()) not in persistent._seen_images:
                     return False
-            
+
             return True
 
 
@@ -1115,32 +1115,32 @@ init 2 python:
             self.images = images or [ ]
             self.displayable = displayable
             self.conditions = [ ]
-        
+
         def check_unlock(self, all_prior):
             for i in self.conditions:
                 if not i.check(all_prior):
                     return False
-            
+
             return True
-        
+
         def show_locked(self, image_num, image_count):
             renpy.transition(self.gallery.transition)
             self.gallery.locked_image(image_num, image_count)
             ui.saybehavior()
             ui.interact()
-        
+
         def show(self, image_num, image_count):
             renpy.transition(self.gallery.transition)
-            
+
             renpy.scene()
             renpy.show("ksgallerybg")
-            
+
             for i in self.images:
                 renpy.show(i)
-            
+
             if self.displayable:
                 ui.add(self.displayable)
-            
+
             ui.saybehavior()
             ui.interact()
 
@@ -1153,22 +1153,22 @@ init 2 python:
             self.properties = properties
             self.images  = [ ]
             self.conditions = [ ]
-        
+
         def check_unlock(self):
             for i in self.conditions:
                 if not i.check(True):
                     return False
-            
+
             for i in self.images:
                 if i.check_unlock(False):
                     return True
-            
+
             return False
-        
+
         def render(self, i, pos):
             props = pos.copy()
             props.update(self.properties)
-            
+
             if not self.check_unlock():
                 insensitive = self.insensitive or self.gallery.locked_button
                 if insensitive is not None:
@@ -1176,13 +1176,13 @@ init 2 python:
                     ui.image(insensitive)
                     ui.close()
                     return
-            
+
             if self.hover:
                 ui.imagebutton(self.idle,
                                self.hover,
                                clicked=ui.returns(("button", i)),
                                **props)
-            
+
             else:
                 ui.fixed(**props)
                 ui.image(self.idle)
@@ -1190,12 +1190,12 @@ init 2 python:
                                self.gallery.hover_border,
                                clicked=ui.returns(("button", i)))
                 ui.close()
-        
+
         def show(self):
-            
+
             all_prior = True
-            
-            
+
+
             im_sort = []
             im_locked = []
             im_locktext = ""
@@ -1205,8 +1205,8 @@ init 2 python:
                 else:
                     im_locked.append((i, img))
             im_sort.extend(im_locked)
-            
-            
+
+
             for i, img in im_sort:
                 ui.add(renpy.Keymap(game_menu=ui.returns(True)))
                 if img.check_unlock(all_prior):
@@ -1222,7 +1222,7 @@ init 2 python:
 
 
     class GalleryPage(object):
-        
+
         def __init__(self, gallery, name, background):
             self.gallery = gallery
             self.name = name
@@ -1231,66 +1231,66 @@ init 2 python:
 
 
     class Gallery(object):
-        
+
         transition = dissolve
-        
+
         locked_button = None
         locked_background = "#000"
-        
+
         hover_border = None
         idle_border = None
-        
+
         background = None
-        
+
         def __init__(self):
             self.pages = [ ]
-            
+
             self.page_ = None
             self.button_ = None
             self.image_ = None
             self.unlockable = None
-        
+
         def page(self, name, background=None):
-            
+
             self.page_ = GalleryPage(self, name, background)
             self.pages.append(self.page_)
-        
+
         def button(self, idle, hover=None, locked=None, **properties):
             self.button_ = GalleryButton(self, idle, hover, locked, properties)
             self.page_.buttons.append(self.button_)
             self.unlockable = self.button_
-        
+
         def image(self, *images):
             self.image_ = GalleryImage(self, images, None)
             self.button_.images.append(self.image_)
             self.unlockable = self.image_
-        
+
         def display(self, displayable):
             self.image_ = GalleryImage(self, [ ], displayable)
             self.button_.images.append(self.image_)
             self.unlockable = self.image_
-        
+
         def unlock(self, *images):
             self.unlockable.conditions.append(GalleryUnlockCondition(images))
-        
+
         def condition(self, condition):
             self.unlockable.conditions.append(GalleryArbitraryCondition(condition))
-        
+
         def allprior(self):
             self.unlockable.conditions.append(GalleryAllPriorCondition())
-        
+
         def unlock_image(self, *images):
             self.image(*images)
             self.unlock(*images)
-        
+
         def navigation(self, page_name, page_num, pages, currentpage=0):
-            
+
             ui.hbox(background=None,xpos=180,ypos=448)
             ui.text(displayStrings.gallery_num_page_prefix+": ", style="gallery_pager_desc")
-            
-            
+
+
             wrap = False
-            
+
             if len(self.pages) > 1:
                 myclick = ui.returns(("page", currentpage - 1))
                 if currentpage <= 0:
@@ -1301,7 +1301,7 @@ init 2 python:
                     "gallery_nav",
                     selected=False,
                     clicked=myclick)
-            
+
             for i, p in enumerate(self.pages):
                 mysel = False
                 myclick = ui.returns(("page", i))
@@ -1312,7 +1312,7 @@ init 2 python:
                                 "gallery_nav",
                                 selected=mysel,
                                 clicked=myclick)
-            
+
             if len(self.pages) > 1:
                 myclick = ui.returns(("page", currentpage + 1))
                 if currentpage >= (len(self.pages) - 1):
@@ -1323,72 +1323,72 @@ init 2 python:
                     "gallery_nav",
                     selected=False,
                     clicked=myclick)
-            
+
             ui.close()
-        
-        
+
+
         def grid_layout(self, gridsize, upperleft, offsets):
             self.layout = GalleryGridLayout(gridsize, upperleft, offsets)
-        
+
         def layout(self, i, n):
             return { }
-        
+
         def locked_image(self, num, total):
             ui.add(self.locked_background)
             ui.text(_(displayStrings.gallery_singlelocked) % (num + 1, total), xalign=0.5, yalign=0.7, style="prefs_label")
-        
+
         def locked_images_screen(self, text):
             renpy.transition(self.transition)
             ui.add(self.locked_background)
             ui.text(text, xalign=0.5, ypos=400, style="prefs_label")
             ui.saybehavior()
             ui.interact()
-        
+
         def show(self, page=0):
-            
+
             while True:
                 renpy.transition(self.transition)
-                
+
                 gallery_predict()
-                
+
                 p = self.pages[page]
-                
+
                 bg = p.background or self.background
                 if bg is not None:
                     renpy.scene()
                     ui.add(bg)
-                
+
                 ui.text(displayStrings.gallery_page_caption, style="page_caption", xpos=324, ypos=216)
                 if len(self.pages) > 1:
                     self.navigation(p.name, page, len(self.pages),page)
-                
+
                 for i, b in enumerate(p.buttons):
                     pos = self.layout(i, len(p.buttons))
                     b.render(i, pos)
-                
+
                 return_button(_intra_jumps("extra_menu", "intra_transition"))
-                
+
                 cmd, arg = ui.interact(suppress_overlay=True, suppress_underlay=True)
-                
+
                 if cmd == "return":
                     return
-                
+
                 elif cmd == "page":
                     page = arg
                     continue
-                
+
                 elif cmd == "button":
                     p.buttons[arg].show()
                     continue
-        
-        
+
+
         def autobutton(self, in_images):
-            
+
             thumbnail = False
             if in_images == "":
                 return
             if isinstance(in_images, tuple):
-                thumb_base = im.Image("ui/bg-ex-gallery-lockedimage.png") 
+                thumb_base = im.Image("ui/bg-ex-gallery-lockedimage.png")
                 for image in in_images:
                     if image.startswith("thumb/"):
                         thumbnail = "event/" + image
@@ -1416,8 +1416,8 @@ init 2 python:
                         self.unlock_image(in_image)
 
     def gallery_predict():
-        
-        return 
+
+        return
 
 
 
@@ -1431,7 +1431,7 @@ init 2 python:
 
 
     def doublespeak(char0, char1, msg0, msg1=False):
-        
+
         global current_line
         speaker=dict()
         ctc=dict()
@@ -1451,20 +1451,20 @@ init 2 python:
                 ctc[n] = char.display_args["ctc"]
             else:
                 ctc[n] = config.nvl_page_ctc
-        
+
         msg0 = char0.what_prefix + msg0 + char0.what_suffix
         if not msg1:
             msg1 = msg0
         else:
             msg1 = char1.what_prefix + msg1 + char1.what_suffix
-        
+
         current_line = None
         if msg0 == msg1:
             store_say(speaker[0] + " & " + speaker[1], msg0)
         else:
             store_say(speaker[0], msg0)
             store_say(speaker[1], msg1)
-        
+
         renpy.shown_window()
         ui.frame(background="ui/bg-doublespeak.png", yalign=1.0, yanchor=288, style="say_window")
         ui.grid(2,1,xfill=True)
@@ -1477,12 +1477,12 @@ init 2 python:
         ui.text(msg1, slow=True, style="say_dialogue", xmaximum=350, **displayStrings.styleoverrides)
         ui.close()
         ui.close()
-        
+
         ui.fixed(xpos=-400)
         ui.image(ctc[0])
         ui.close()
         ui.image(ctc[1])
-        
+
         ui.saybehavior(afm=msg0+msg1)
         ui.interact(roll_forward=True, type="say")
         renpy.checkpoint()
@@ -1490,12 +1490,12 @@ init 2 python:
 
     def written_note(text, window_args={}, text_args={}, quiet=False):
         global current_line, _window
-        
+
         def note_widget(text=text, window_args=window_args, text_args=text_args):
-            
+
             default_text_args = displayStrings.styleoverrides.copy()
             default_text_args.update(text_args)
-            
+
             ui.tag("written_note")
             ui.frame(style="note_window", **window_args)
             ui.vbox()
@@ -1505,77 +1505,77 @@ init 2 python:
             ui.close()
             ui.image(centered.display_args["ctc"])
             ui.saybehavior(afm=text)
-        
+
         renpy.shown_window()
-        
+
         current_line = None
         store_say(displayStrings.text_history_note, text.replace("\n\n","\n"))
-        
+
         if not quiet:
             renpy.music.play(sfx_paper, channel="sound")
-        
+
         ui.at(note_enter)
         note_widget()
-        
+
         ui.interact(roll_forward=True, type="say")
         renpy.checkpoint()
-        
+
         ui.at(note_exit)
         note_widget()
-        
+
         renpy.shown_window()
         renpy.pause(0.5)
         renpy.hide("written_note")
 
 
     def extra_button(text,in_displayable,clicked=None,style='prefs_label',state="button"):
-        
+
         image = im.Image(in_displayable[0:-4]+"-c.png", xalign=0.5)
         imagebase = VBox(in_displayable, xalign=0.5)
         imagedisabled = VBox(ib_base(in_displayable), xalign=0.5)
         textbase = Text(text, style=style, xalign=0.5)
         texthover = Text(text, style=style, color="#000", xalign=0.5)
         textdisabled = Text(text, style=style, color="#00000019", xalign=0.5)
-        
-        if state == "return": 
+
+        if state == "return":
             textbase = LiveComposite((100, 30),
                                      (0, 3), ib_base("ui/bt-return.png"),
                                      (30, 0), textbase)
             texthover = LiveComposite((100, 30),
                                      (0, 3), "ui/bt-return.png",
                                      (30, 0), texthover)
-        
+
         if state == "disabled":
             button_disabled = VBox(imagedisabled, textdisabled)
-            ui.imagebutton(button_disabled,button_disabled,clicked=None, yalign=1.0) 
+            ui.imagebutton(button_disabled,button_disabled,clicked=None, yalign=1.0)
             return
         button_base = VBox(imagebase, textbase)
         button_hover = VBox(image, texthover)
         ui.imagebutton(button_base,button_hover,clicked=clicked, yalign=1.0)
 
     def toggle_commentary():
-        
+
         persistent.commentary_on = not persistent.commentary_on
         return False
 
     def toggle_h():
-        
+
         persistent.hdisabled = not persistent.hdisabled
         return False
 
 
     def increase_m_yoffset():
-        
+
         global auto_offset
         store_m_yoffset(persistent.mpicker_yoffset + auto_offset)
 
     def decrease_m_yoffset():
-        
+
         global auto_offset
         store_m_yoffset(persistent.mpicker_yoffset - auto_offset)
 
     def store_m_yoffset(input=persistent.mpicker_yoffset):
-        
+
         global auto_offset, ex_m_tracks
         maxheight = auto_offset * (len(ex_m_tracks) - 8)
         if input > maxheight:
@@ -1595,36 +1595,36 @@ init 2 python:
 
     def set_binding(label, key):
         renpy.transition(config.intra_transition)
-        if mm_context(): 
+        if mm_context():
             bgimage = style.mm_static.background
         else:
             bgimage = None
-        
+
         message = displayStrings.gamepad_request_key % label
-        
+
         _prompt(None, message, background=bgimage, interact=False)
-        
+
         _joystick_get_binding()
         ui.add(renpy.Keymap(game_menu=ui.returns(True)))
         binding = ui.interact()
         _joystick_take_binding(binding, key)
-        
+
         return True
 
 
     def refresh_label(a,b):
-        
+
         global ss_desc
         disp = Text(ss_desc, xalign=0.5, yalign=0.98, size=18, **displayStrings.styleoverrides)
         return (disp,0.05)
 
     def ss_unhovered():
-        
+
         global ss_desc
         ss_desc = ""
 
     def ss_hovered(hover_text=None):
-        
+
         global ss_desc
         if not hover_text or hover_text == True:
             ss_desc = ""
@@ -1632,13 +1632,13 @@ init 2 python:
             ss_desc = hover_text
 
     def ss_button(text, hover_text=None, clicked=None, selected=False):
-        
+
         global ss_desc, ss_hovered, ss_unhovered
         myhovered = renpy.curry(ss_hovered)(hover_text=hover_text)
         layout.button(text, 'mm', clicked=clicked, hovered=myhovered, unhovered=ss_unhovered, selected=selected)
 
     def store_s_yoffset(input=persistent.spicker_yoffset):
-        
+
         global auto_offset, available_scenes
         maxheight = auto_offset * (len(available_scenes) - 8)
         if input > maxheight:
@@ -1649,17 +1649,17 @@ init 2 python:
         yadj.change(input)
 
     def increase_s_yoffset():
-        
+
         global auto_offset
         store_s_yoffset(persistent.spicker_yoffset + auto_offset)
 
     def decrease_s_yoffset():
-        
+
         global auto_offset
         store_s_yoffset(persistent.spicker_yoffset - auto_offset)
 
     def toggle_playthrough():
-        
+
         global playthroughflag
         playthroughflag = not playthroughflag
         return ("_pt_toggled", playthroughflag)
@@ -1672,10 +1672,10 @@ init 2 python:
         inkeys = indict.keys()
         for key in inkeys:
             outdict[prefix + key] = indict[key]
-        
+
         if combine:
             outdict.update(indict)
-        
+
         return outdict
 
 
@@ -1684,26 +1684,26 @@ init 2 python:
     class drugsDisp(renpy.Displayable):
         def __init__(self, width, height):
             super(drugsDisp, self).__init__(self)
-            
-            self.length = 22.0 
-            self.fadeintime = 1.0 
-            self.framelength = 0.04 
-            
+
+            self.length = 22.0
+            self.fadeintime = 1.0
+            self.framelength = 0.04
+
             self.width = width
             self.height = height
-            
+
             self.make_words()
-        
+
         def make_words(self):
-            
+
             from random import shuffle
-            
-            self.progress = 0 
-            
+
+            self.progress = 0
+
             self.singlewordlist = displayStrings.drugs_wordlist
             shuffle(self.singlewordlist)
             self.wordlist = self.singlewordlist * 5
-            
+
             self.timeperword = self.length / len(self.wordlist)
             self.words = []
             self.disps = []
@@ -1716,46 +1716,46 @@ init 2 python:
                 thisword.fulldisp = self.subdisp(thisword.payload,thisword.size,255)
                 self.words.append(thisword)
                 self.disps.append(thisword.fulldisp)
-        
+
         def visit(self):
             return self.disps
-        
+
         def subdisp(self, payload, size, alpha):
             font = srsfont
             if displayStrings.sayfont != mainfont:
                 font = displayStrings.sayfont
             return Text(payload,size=size, color=(0,0,0,alpha), font=font)
-        
+
         def randompos(self):
             from random import randrange
             return (randrange(self.width), randrange(self.height))
-        
+
         def randomsize(self):
             from random import randrange
             return randrange(30,100)
-        
+
         def render(self, width, height, st, at):
-            
+
             if st == 0:
                 self.make_words()
-            
-            
-            
-            
+
+
+
+
             width = self.width
             height = self.height
-            
+
             from math import floor
-            
+
             rv = renpy.Render(width, height)
             rv.fill((255,255,255,255))
-            
-            
+
+
             for n, word in enumerate(self.words):
-                
+
                 if n > self.progress:
                     break
-                
+
                 if word.alpha < 255:
                     word.alpha = ((st - (n * self.timeperword)) / self.fadeintime) * 255
                     if word.alpha > 255:
@@ -1763,16 +1763,16 @@ init 2 python:
                     disp = self.subdisp(word.payload, word.size, word.alpha)
                 else:
                     disp = word.fulldisp
-                
+
                 rend = renpy.render(disp,width,height,st,at)
                 size = rend.get_size()
                 rv.blit(rend, (word.position[0]-(size[0]/2), word.position[1]-(size[1]/2)))
-            
-            
+
+
             newprogress = int(floor(st / self.timeperword))
             self.progress = newprogress
             renpy.redraw(self, self.framelength)
-            
+
             return rv
 
     def datedisplay(date):
@@ -1788,46 +1788,46 @@ init 2 python:
         """
         copypaste from renpy/exports.py, see docs there
         """
-        
+
         if not filename in persistent.seen_videos:
             config.skipping = None
-        
+
         if stop_music:
             renpy.audio.audio.set_force_stop("music", True)
-        
+
         renpy.movie_start_fullscreen(filename, loops=loops)
-        
+
         if not filename in persistent.seen_videos:
             renpy.ui.saybehavior(dismiss=['abort_video'])
         else:
             renpy.ui.saybehavior(dismiss=['abort_video','dismiss'])
-        
+
         if delay is None or delay < 0:
             renpy.ui.soundstopbehavior("movie")
         else:
             renpy.ui.pausebehavior(delay, False)
-        
+
         if renpy.game.log.forward:
             roll_forward = True
         else:
             roll_forward = None
-        
+
         rv = renpy.ui.interact(suppress_overlay=True,
                                suppress_underlay=True,
                                show_mouse=False,
                                roll_forward=roll_forward)
-        
-        
-        
-        
+
+
+
+
         if not filename in persistent.seen_videos:
             persistent.seen_videos.append(filename)
-        
+
         renpy.movie_stop()
-        
+
         if stop_music:
             renpy.audio.audio.set_force_stop("music", False)
-        
+
         return rv
 
     renpy.movie_cutscene = custom_movie_cutscene
