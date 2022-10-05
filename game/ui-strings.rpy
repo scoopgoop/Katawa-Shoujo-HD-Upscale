@@ -56,7 +56,7 @@ init -3 python:
 
     displayDict["en"].return_button_text = u"Return"
 
-    displayDict["en"].hdisabled_label = u"    Disable adult content"
+    displayDict["en"].hdisabled_label = u"Disable adult content"
     displayDict["en"].config_page_caption = u"Options"
     displayDict["en"].config_fullscreen_label = u'Fullscreen mode'
     displayDict["en"].config_transitions_label = u'Disable transitions'
@@ -109,7 +109,7 @@ init -3 python:
 
 
     displayDict["en"].music_page_caption = "Extras > Jukebox"
-    displayDict["en"].music_stop_button_text = "   Stop"
+    displayDict["en"].music_stop_button_text = "Stop"
     displayDict["en"].music_now_playing = "Now playing"
 
     displayDict["en"].gallery_page_caption = "Extras > Gallery"

@@ -1528,7 +1528,7 @@ init 2 python:
         renpy.hide("written_note")
 
 
-    def extra_button(text,in_displayable,clicked=None,style='prefs_label',state="button"):
+    def extra_button(text,in_displayable,clicked=None,style='prefs_label', state="button"):
 
         image = im.Image(in_displayable[0:-4]+"-c.png", xalign=0.5)
         imagebase = VBox(in_displayable, xalign=0.5)
@@ -1540,10 +1540,10 @@ init 2 python:
         if state == "return":
             textbase = LiveComposite((100, 30),
                                      (0, 3), ib_base("ui/bt-return.png"),
-                                     (30, 0), textbase)
+                                     (50, 0), textbase)
             texthover = LiveComposite((100, 30),
                                      (0, 3), "ui/bt-return.png",
-                                     (30, 0), texthover)
+                                     (50, 0), texthover)
 
         if state == "disabled":
             button_disabled = VBox(imagedisabled, textdisabled)
