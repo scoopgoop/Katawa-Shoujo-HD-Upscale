@@ -1061,17 +1061,17 @@ label credits(c_movie=False):
 
 
     python:
-        buffer = 100
-        totalsize = textheight + (buffer * 2) + (600 * 2)
-        textoffset = 400 - textwidth / 2
+        buffer = 180
+        totalsize = textheight + (buffer * 2) + (1920 * 2)
+        textoffset = 720 - textwidth / 2
 
         if c_movie:
             textoffset += 160
 
-        credits_final = LiveComposite((800, totalsize),
-                                      (313,233), "ui/cred_logo.png",
-                                      (textoffset, 600 + buffer ), creditstext_disp,
-                                      (311, totalsize - 600 + 238), "ui/4lsl-small.png",
+        credits_final = LiveComposite((1440, totalsize),
+                                      (563,419), "ui/cred_logo.png",
+                                      (textoffset, 1080 + buffer ), creditstext_disp,
+                                      (560, totalsize - 1080 + 428), "ui/4lsl-small.png",
                                       )
 
     show expression credits_final as roll behind credits onlayer master at Position(xalign=0.5, yalign=0.0)
