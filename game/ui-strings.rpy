@@ -70,7 +70,7 @@ init -3 python:
     displayDict["en"].config_sfxtest_label = u"Test"
     displayDict["en"].config_gamepad_label = u"Gamepad keymap..."
 
-    displayDict["en"].config_language_sel = u"Language selection&"
+    displayDict["en"].config_language_sel = u"Language selection..."
     displayDict["en"].config_language_caption = u"Options > Language selection"
     displayDict["en"].config_language_restart_note = "Note: Changing the language while a session is in progress will return the game to the latest script node."
 

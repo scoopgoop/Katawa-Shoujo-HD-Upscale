@@ -527,7 +527,7 @@ init 2 python:
             devlvl=0
 
 
-    def widget_button(text,displayable,clicked=None,style='prefs_label',xsize=220,ysize=30,widgetyoffset=3,textxoffset=40,state="button", xpos=0, ypos=0):
+    def widget_button(text,displayable,clicked=None,style='prefs_label',xsize=220,ysize=30,widgetyoffset=3,textxoffset=50,state="button", xpos=0, ypos=0):
 
         textbase = Text(text, style=style)
         texthover = Text(text, style=style, color="#000")
