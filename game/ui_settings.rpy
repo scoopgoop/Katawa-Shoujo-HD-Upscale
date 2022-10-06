@@ -3551,10 +3551,14 @@ init python:
     style.gallery_nav_button_text.selected_color = "#000"
     style.gallery_nav_button.xmargin = 2
     style.gallery_nav_button.xpadding = 4
+    style.gallery_nav_button.xanchor = -130
+    style.gallery_nav_button.yanchor = -345
 
 
     style.create('gallery_pager_desc', 'gallery_nav_button_text')
     style.gallery_pager_desc.color = "#00000066"
+    style.gallery_pager_desc.xanchor = -130
+    style.gallery_pager_desc.yanchor = -320
 
 
 
