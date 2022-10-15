@@ -4180,7 +4180,7 @@ with charachange
 show shizu basic_normal2_ss onlayer master
 with charachange
 
-ssh "Sp{w=0.2}on{w=0.2}ta{w=0.2}ne{w=0.2}ou{w=0.2}s."
+ssh "Sp-{w=0.2}on-{w=0.2}ta-{w=0.2}ne-{w=0.2}ou-{w=0.2}s."
 
 show shizu behind_blank_ss onlayer master
 with charachange
@@ -4209,7 +4209,7 @@ with charachange
 show shizu behind_frustrated_ss onlayer master
 with charachange
 
-ssh "Two fights that you know of aren't worth calling \“so much.\” If you had been here last year you could say that."
+ssh "Two fights that you know of aren't worth calling \“so much.\”  If you had been here last year you could say that."
 
 his "I heard it was a rough year. Something about how you tried to institute a badge policy."
 
