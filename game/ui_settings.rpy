@@ -2276,7 +2276,7 @@ init 1:
     image ev shizu_chess_base2 = "event/shizu_supercg/shizu_chess_base2.jpg"
     image ev shizu_chess_base3 = "event/shizu_supercg/shizu_chess_base3.jpg"
 
-    image sc_shiz normal = im.Crop("event/shizu_supercg/shizu_chess_base3.jpg", 400, 0, 400, 1080)
+    image sc_shiz normal = im.Crop("event/shizu_supercg/shizu_chess_base3.jpg", 720, 0, 720, 1080)
 
 
 
@@ -2293,11 +2293,11 @@ init 1:
     image rin silhouette = silhouette("sprites/rin/rin_relaxed_surprised.png")
 
     python:
-        shizuepiccomp = im.Composite ((874,836),
+        shizuepiccomp = im.Composite ((1573,1505),
                                   (0,0),sp_night("sprites/shizu/close/shizu_out_serious_close.png"),
                                   (2.5,1080),sp_night("vfx/shizu_out_serious_legs.png"))
 
-        shizuepiccomp_sil = im.Composite ((874,836),
+        shizuepiccomp_sil = im.Composite ((1573,1505),
                                   (0,0),silhouette("sprites/shizu/close/shizu_out_serious_close.png"),
                                   (2.5,1080),silhouette("vfx/shizu_out_serious_legs.png"))
 
