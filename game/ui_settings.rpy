@@ -3244,6 +3244,8 @@ init python:
 
     renpy.image("mmcache",DynamicDisplayable(mm_static_bg))
 
+    
+    
     style.mm_root.background = DynamicDisplayable(mm_live_bg)
     style.create("mm_static", "mm_root")
     style.mm_static.background = DynamicDisplayable(mm_static_bg)

@@ -21,7 +21,6 @@ label main_menu:
     jump main_menu_screen
 
 
-
 label _custom_game_menu(_game_menu_screen=_game_menu_screen):
     if not _game_menu_screen:
         return
@@ -1007,7 +1006,7 @@ init 5 python:
             renpy.jump("after_credits")
         
         ui.keymap(K_ESCAPE=clicked)
-        ui.textbutton("{color=#000}Skip{/color}",clicked=clicked, xpos=795, xanchor=1.0, ypos=595, yanchor=1.0, xpadding=6,
+        ui.textbutton("{color=#000}Skip{/color}",clicked=clicked, xpos=1432, xanchor=1.0, ypos=1072, yanchor=1.0, xpadding=6,
                       background=RoundRect((48, 48, 48, 255), 6),
                       hover_background=RoundRect((64, 64, 64, 255), 6),
                       color="#000",
@@ -1053,8 +1052,8 @@ label credits(c_movie=False):
 
     $ renpy.pause(1.0, hard=True)
 
-    $ textheight = creditstext_disp.laidout_height
-    $ textwidth = creditstext_disp.laidout_width
+    $ textheight = 1660
+    $ textwidth = 315
 
     hide textsniff onlayer master
     with None
@@ -1069,7 +1068,7 @@ label credits(c_movie=False):
             textoffset += 160
 
         credits_final = LiveComposite((1440, totalsize),
-                                      (563,419), "ui/cred_logo.png",
+                                      (561,419), "ui/cred_logo.png",
                                       (textoffset, 1080 + buffer ), creditstext_disp,
                                       (560, totalsize - 1080 + 428), "ui/4lsl-small.png",
                                       )

@@ -1061,7 +1061,6 @@ init 2 python:
 
 
 
-
     def ksgallery_unlock(name):
         if not isinstance(name, tuple):
             name = tuple(name.split())
