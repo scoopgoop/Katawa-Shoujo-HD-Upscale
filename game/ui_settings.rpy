@@ -2023,15 +2023,15 @@ init 1:
     image evh shizune_hcg_tied_stare_small = "event/shizune_hcg_tied/shizune_hcg_tied_stare_small.jpg"
     image evh shizune_hcg_tied_stare = "event/shizune_hcg_tied/shizune_hcg_tied_stare.jpg"
 
-    image evh_hi shizune_hcg_tied_hisao2 = im.Composite((1600,1200),
-                                                        (1080,290),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2.png")
+    image evh_hi shizune_hcg_tied_hisao2 = im.Composite((2880,2160),
+                                                        (1944,522),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2.png")
     image evh_hi shizune_hcg_tied_hisao2_small = im.Composite((1440,1080),
-                                                              (540,145),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png")
+                                                              (972,261),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png")
 
 
     image evhul shizune_hcg_tied_hisao2_small = im.Composite((1440,1080),
                                                              (0,0), "event/shizune_hcg_tied/shizune_hcg_tied_kinky3_small.jpg",
-                                                             (540,145),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png")
+                                                             (972,261),"event/shizune_hcg_tied/shizune_hcg_tied_hisao2_small.png")
 
 
     image evh shizu_undressing_clothed_stare = "event/shizu_undressing/shizu_undressing_clothed_stare.jpg"
