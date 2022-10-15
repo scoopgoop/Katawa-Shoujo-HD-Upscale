@@ -62,11 +62,11 @@ init -3 python:
     displayDict["en"].config_transitions_label = u'Disable transitions'
     displayDict["en"].config_skip_unseen_label = u'Skip unread text'
     displayDict["en"].config_skip_after_choice_label = u'Keep skipping after choices'
-    displayDict["en"].config_textspeed_label = u'Text speed'
-    displayDict["en"].config_afmspeed_label = u'Auto mode delay'
-    displayDict["en"].config_musicvol_label = u"Music volume"
-    displayDict["en"].config_musicvol_jukebox_label = u"Vol."
-    displayDict["en"].config_sfxvol_label = u"SFX volume"
+    displayDict["en"].config_textspeed_label = u'{size=32}Text speed{/size}'
+    displayDict["en"].config_afmspeed_label = u'{size=32}Auto mode delay{/size}'
+    displayDict["en"].config_musicvol_label = u"{size=32}Music volume{/size}"
+    displayDict["en"].config_musicvol_jukebox_label = u"{size=32}Vol.{/size}"
+    displayDict["en"].config_sfxvol_label = u"{size=32}SFX volume{/size}"
     displayDict["en"].config_sfxtest_label = u"Test"
     displayDict["en"].config_gamepad_label = u"Gamepad keymap..."
 

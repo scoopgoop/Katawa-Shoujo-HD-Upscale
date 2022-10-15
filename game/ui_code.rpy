@@ -3,7 +3,7 @@
 
 
 init -1 python:
-
+    
     def is_glrenpy():
         if int(renpy.version().split(".")[1]) > 10:
             return True
@@ -926,12 +926,13 @@ init 2 python:
     class customSliderPreference(object):
 
         def __init__(self, name, range, get, set, enable='True'):
-
             self.name = name
             self.range = range
             self.get = get
             self.set = set
             self.enable = enable
+            
+            
 
             config.all_preferences[name] = self
 
@@ -1614,7 +1615,7 @@ init 2 python:
     def refresh_label(a,b):
 
         global ss_desc
-        disp = Text(ss_desc, xalign=0.5, yalign=0.98, size=18, **displayStrings.styleoverrides)
+        disp = Text(ss_desc, xalign=0.5, yalign=0.98, size=32, **displayStrings.styleoverrides)
         return (disp,0.05)
 
     def ss_unhovered():
