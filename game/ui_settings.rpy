@@ -1628,7 +1628,7 @@ init 1:
         def traincomposite(comppath):
             return im.Composite(None,
                                 (0,0), "event/lilly_train/lilly_trainride_ni_norm.png",
-                                (558, 360), comppath)
+                                (578, 360), comppath)
 
     image lilly_trainride_ni ara = traincomposite("event/lilly_train/lilly_trainride_ni_ara.png")
     image lilly_trainride_ni opensmile = traincomposite("event/lilly_train/lilly_trainride_ni_opensmile.png")
