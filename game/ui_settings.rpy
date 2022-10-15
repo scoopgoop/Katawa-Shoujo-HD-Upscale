@@ -3151,8 +3151,8 @@ init python:
 
     config.window_icon = "ui/icon.png"
 
-    config.thumbnail_width = 123
-    config.thumbnail_height = 93
+    config.thumbnail_width = 118
+    config.thumbnail_height = 88
 
     config.enter_transition = dotwipe_down
     config.exit_transition = dotwipe_up
@@ -3451,8 +3451,8 @@ init python:
 
     style.file_picker_entry.xminimum = 0.5
 
-    style.file_picker_frame.xmargin = 6
-    style.file_picker_frame.ymargin = 6
+    style.file_picker_frame.xmargin = 7
+    style.file_picker_frame.ymargin = 7
 
     style.file_picker_frame_box.box_spacing = 4
     style.file_picker_entry_box.box_spacing = 4
@@ -3477,7 +3477,8 @@ init python:
     style.file_picker_entry.xminimum=684
     style.file_picker_entry.background = ib_base("ui/bt-scribble.png")
     style.file_picker_entry.hover_background = "ui/bt-scribble.png"
-    style.file_picker_entry.top_padding = 3
+    style.file_picker_entry.top_padding = 7
+    style.file_picker_entry.left_padding = 20
 
     style.vscrollbar.thumb_offset = -10
     style.vscrollbar.ymaximum = 450
