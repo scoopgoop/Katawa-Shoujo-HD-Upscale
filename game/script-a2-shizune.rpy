@@ -1100,7 +1100,7 @@ play sound sfx_storebell
 scene bg suburb_shanghaiint onlayer master at bgright
 with locationchange
 
-"It's a total ghost town in here. It's not exactly peak hours, but every other caf� I passed had at least a few customers."
+"It's a total ghost town in here. It's not exactly peak hours, but every other café I passed had at least a few customers."
 
 "Actually, the Shanghai has been fairly empty every time I passed by. How does this place stay in business?"
 
@@ -1129,7 +1129,7 @@ with charachange
 
 yu "Oh no, I'm sorry, I'm really sorry, sorry, please forgive me!"
 
-hi "It's okay, and you don't have to do that \“Hello, thanks for choosing our shop!\” thing since we know you."
+hi "It's okay, and you don't have to do the “thanks for choosing our shop!' thing since we know you."
 
 show yuukoshang worried_up onlayer master
 with charachange
@@ -1185,7 +1185,7 @@ with charachange
 
 yu "Is that what Shizune is saying?"
 
-hi "Nah, she can't hear you. It's just weird for a caf� to make you have to go out of your way to look for a menu."
+hi "Nah, she can't hear you. It's just weird for a café to make you have to go out of your way to look for a menu."
 
 show yuukoshang worried_up onlayer master
 with charachange
@@ -1206,7 +1206,7 @@ yu "I can't work here any more."
 
 "What a bad place for her circular train of logic to end up."
 
-hi "No, come on. That kind of stuff is what sets this place apart; there are a lot of caf�s around here, you know. I think it's charming, really. Please don't quit. Business is good here, isn't it?"
+hi "No, come on. That kind of stuff is what sets this place apart; there are a lot of cafés around here, you know. I think it's charming, really. Please don't quit. Business is good here, isn't it?"
 
 show yuukoshang worried_up onlayer master
 with charachange
@@ -1404,7 +1404,7 @@ with characlose
 show bg suburb_shanghaiext onlayer master
 with locationchange
 
-"We leave the caf�, and I find myself hoping that the streets are still devoid of people. Yuuko seemed confused as to what we were doing, and I imagine it'll only get worse as more people see us."
+"We leave the café, and I find myself hoping that the streets are still devoid of people. Yuuko seemed confused as to what we were doing, and I imagine it'll only get worse as more people see us."
 
 show shizu adjust_happy_close onlayer master
 with charachange
@@ -1509,7 +1509,7 @@ shi "..."
 
 "Her fingers dance lightly over the surface of the box, and I think of taking it from her, but I doubt she would let me. Shizune makes a quick gesture with her hands as best she can, pausing a bit afterward as if wanting to say more."
 
-"I'm sure that what she means is \“thank you.\” I'm glad that I was able to catch it."
+"I'm sure that what she means is “thank you.” I'm glad that I was able to catch it."
 
 scene black onlayer master
 with dissolve
@@ -1742,7 +1742,7 @@ mi "How very Japanese, putting the consequences above everything else."
 show misha sign_smile onlayer master
 with charachange
 
-mi "Hicchan, have you ever heard of the expression \“missing the forest for the trees?\”"
+mi "Hicchan, have you ever heard of the expression “missing the forest for the trees?’"
 
 hi "No."
 
@@ -1871,7 +1871,7 @@ mi "Checkers?"
 
 "The instant she says it, Misha takes out a bag of checkers and places them on the table."
 
-hi "Only two people can play that. I told you"
+hi "Only two people can play that. I told you-"
 
 show misha hips_grin onlayer master
 with charachange
@@ -2352,7 +2352,7 @@ mi "Hicchan, do you hate games where luck is involved?"
 show misha hips_grin onlayer master
 with charachange
 
-mi "\“I don't like games that revolve around luck of the draw,\” right? That was you, Hicchan~."
+mi "\“I don't like games that revolve around luck of the draw,’ right? That was you, Hicchan~."
 
 hi "Yeah. Revolving around luck isn't the same as just having luck involved, though. I don't hate games just for having an element of luck. Most games have an element of luck to them anyway. It's what keeps them interesting."
 
@@ -2427,7 +2427,7 @@ shi "..."
 show misha cross_frown onlayer master
 with charachange
 
-mi "If you value something, you fight. Struggle is proof of precs preciousness? I think so, at least. Or~! You concede immediately~! Since it's so precious that it stops your thinking. The first is a passionate love. The second is a gentle love."
+mi "If you value something, you fight. Struggle is proof of precs- preciousness? I think so, at least. Or~! You concede immediately~! Since it's so precious that it stops your thinking. The first is a passionate love. The second is a gentle love."
 
 show shizu basic_normal2 onlayer master
 with charachange
@@ -2819,7 +2819,7 @@ shi "..."
 show misha hips_frown onlayer master
 with charachange
 
-mi "Hicchan~! Why are you so obsessed with eating the veal cutlet bread, specifically?"
+mi "Hicchan~! Why are you so obsessed with eating the veal cutlet bread, spe-ci-fi-cal-ly?"
 
 hi "It's hard to get normally. Rare things are more delicious."
 
@@ -3209,7 +3209,7 @@ hi "AAAAAAAAAAHHH!!"
 
 hi "Do you know how stupid I look now? I sat there for like half the damn day acting like I couldn't read sign language, and are you seriously telling me that she knew the whole time I could?"
 
-hi "She was probably thinking, \“this guy is a complete jackass, pretending he can't understand me.\” I just made a total ass of myself."
+hi "She was probably thinking, \“this guy is a complete jackass, pretending he can't understand me.’ I just made a total ass of myself."
 
 hi "How could you let me do this?!"
 
@@ -3379,7 +3379,7 @@ play ambient sfx_stallbuilding fadein 8.0
 
 "Her work ethic is admirable. It's obvious that it bores her, and even annoys her, but she doesn't slacken her pace. When she gets tired nailing a stall together with one arm, she switches to the other."
 
-hi "Shizune"
+hi "Shizune-"
 
 "I feel like an idiot the second I say her name."
 
@@ -3728,17 +3728,17 @@ play music music_tension
 
 "Kenji doesn't hear me, having gotten a good momentum going. Wrapped up in the energy of his own ranting, he starts to completely flip out and flail his arms, appearing to wildly throw gang signs."
 
-ke "I walked up to the desk and said to her, \“Hey you, fascist woman! What is this badge idea? How out of touch can you be, here in your ivory tower, smugly looking down upon us like we're just a bunch of idiots? Who do you think you are?\”"
+ke "I walked up to the desk and said to her, \“Hey you, fascist woman! What is this badge idea? How out of touch can you be, here in your ivory tower, smugly looking down upon us like we're just a bunch of idiots? Who do you think you are?’"
 
-ke "\“Your level of elitism is terrible, you're probably one of those outrageous rich people who have chaffeurs drive them around slums so they can point and laugh...\”"
+ke "\“Your level of elitism is terrible, you're probably one of those outrageous rich people who have chaffeurs drive them around slums so they can point and laugh...’"
 
-ke "\“...and only drink pricey coffee beans shat out by the last living dinosaur and brewed in a solid gold skull.\”"
+ke "\“...and only drink pricey coffee beans shat out by the last living dinosaur and brewed in a solid gold skull.’"
 
-ke "\“And how could you? Go open up a history book; don't you know that the bourgeoisie are always overthrown in a bloody revolution for shit like this? Stupid! You're an idiot!\”"
+ke "\“And how could you? Go open up a history book; don't you know that the bourgeoisie are always overthrown in a bloody revolution for shit like this? Stupid! You're an idiot!’"
 
-ke "\“Sure, the revolutionaries usually end up turning everything into an utter clusterfuck later on, but a maniac is the only kind of person who would create a policy like this...\”"
+ke "\“Sure, the revolutionaries usually end up turning everything into an utter clusterfuck later on, but a maniac is the only kind of person who would create a policy like this...’"
 
-ke "\“...it's like something I would create to make people suffer, only real and you want to institutionalize it! Where will this desecration of our rights end? We are people! This is not justice!\”"
+ke "\“...it's like something I would create to make people suffer, only real and you want to institutionalize it! Where will this desecration of our rights end? We are people! This is not justice!’"
 
 show kenji neutral onlayer master
 with charachange
@@ -3748,7 +3748,7 @@ ke "That's what I said."
 show kenji rage onlayer master
 with charachange
 
-ke "Then I added a cry of \“They can take our things, but they'll never take our freeeeeedoooooom!\” to appeal to the masses like in that movie about the life of William Wallace where they took his things but not his freedom, and then killed him."
+ke "Then I added a cry of \“They can take our things, but they'll never take our freeeeeedoooooom!’ to appeal to the masses like in that movie about the life of William Wallace where they took his things but not his freedom, and then killed him."
 
 stop music fadeout 5.0
 
@@ -4209,7 +4209,7 @@ with charachange
 show shizu behind_frustrated_ss onlayer master
 with charachange
 
-ssh "Two fights that you know of aren't worth calling \“so much.\”  If you had been here last year you could say that."
+ssh "Two fights that you know of aren't worth calling \“so much.’ If you had been here last year you could say that."
 
 his "I heard it was a rough year. Something about how you tried to institute a badge policy."
 
@@ -4861,7 +4861,7 @@ yu "Yes I do..."
 show misha sign_confused onlayer master
 with charachange
 
-mi "But"
+mi "But-"
 
 show misha cross_laugh onlayer master
 with charachange
@@ -4956,7 +4956,7 @@ with charachange
 
 ssh "Of course."
 
-hi "What do you mean \“of course?\” You didn't dress up last time."
+hi "What do you mean \“of course?’ You didn't dress up last time."
 
 show shizu basic_normal2_close onlayer master
 with charachange
@@ -5107,7 +5107,7 @@ mi "Shicchan cooked, and Lilly took the orders, and I translated for them~!"
 show misha hips_smile onlayer master
 with charachange
 
-mi "Shicchan kept saying, \“It's so inefficient~! Misha~! Why do you have to be the middleman? As in~, why is there a middleman in the first place? Huh~? It would be fine if I did the cooking and you took orders! It doesn't make sense at all!\”"
+mi "Shicchan kept saying, \“It's so inefficient~! Misha~! Why do you have to be the middleman? As in~, why is there a middleman in the first place? Huh~? It would be fine if I did the cooking and you took orders! It doesn't make sense at all!’"
 
 show misha sign_smile onlayer master
 with charachange
@@ -5213,7 +5213,7 @@ with charachange
 
 stop music fadeout 5.0
 
-mi "Okay~! Then, Student Council is adjourned? for today~!"
+mi "Okay~! Then, Student Council is ad-jour-ned? for today~!"
 
 show misha hips_grin onlayer master
 with charachange
@@ -5409,7 +5409,7 @@ mi "Hahahahahaha~! Maybe I will~! That's a great idea, Hicchan!"
 
 hi "Ah, no, no it's not! Don't do that. I wasn't being serious."
 
-hi "Although... maybe it would annoy Shicc Shizune."
+hi "Although... maybe it would annoy Shicc- Shizune."
 
 show misha hips_grin_close onlayer master
 with charachange
