@@ -1077,7 +1077,7 @@ init 1:
 
     image ev emi_run_face_zoomout_ss:
         sunset("event/emi_run_face.jpg")
-        size (1440,1080) crop (40, 30, 720, 540) subpixel True
+        size (1440,1080) crop (72, 54, 1296, 972) subpixel True
         ease 10.0 crop (0, 0, 1440, 1080)
 
     image ev emi_firstkiss = "event/emi_firstkiss.jpg"
@@ -1284,7 +1284,7 @@ init 1:
                                 (540, 360), comppath)
 
     image ev hisao_mirror = "event/hisao_mirror.jpg"
-    image ev hisao_mirror_1440 = im.FactorScale("event/hisao_mirror.jpg", 0.8)
+    image ev hisao_mirror_800 = im.FactorScale("event/hisao_mirror.jpg", 0.8)
 
     image ev busride = "event/busride.jpg"
     image ev busride_ni = "event/busride_ni.jpg"
@@ -1332,8 +1332,8 @@ init 1:
     image ev rin_rain_away_close = "event/rin_rain_away_close.jpg"
     image ev rin_rain_towards_close = "event/rin_rain_towards_close.jpg"
 
-    image ovl rin_rain_hisaotowards_close = im.Crop("event/rin_rain_towards_close.jpg", 720,0,720,2160)
-    image ovl rin_rain_hisaotowards = im.Crop("event/rin_rain_towards.jpg", 720,0,720,1944)
+    image ovl rin_rain_hisaotowards_close = im.Crop("event/rin_rain_towards_close.jpg", 720,0,720,1080)
+    image ovl rin_rain_hisaotowards = im.Crop("event/rin_rain_towards.jpg", 720,0,720,1080)
 
     image rin basic_deadpan_superclose = "sprites/rin/superclose/rin_basic_deadpan_superclose.png"
     image rin basic_deadpannormal_superclose = "sprites/rin/superclose/rin_basic_deadpannormal_superclose.png"
@@ -1450,13 +1450,13 @@ init 1:
 
     image ev rin_trueend_gone = "event/rin_trueend/rin_trueend_gone.jpg"
     image ev rin_trueend_gone_ni = night("event/rin_trueend/rin_trueend_gone.jpg")
-    image ev rin_trueend_normal = rin_trueend_comp([((113,124),"normal")])
-    image ev rin_trueend_closed = rin_trueend_comp([((113,124),"normal"), ((177,129),"closed")])
-    image ev rin_trueend_sad = rin_trueend_comp([((113,124),"normal"), ((177,129),"sad")])
-    image ev rin_trueend_smile = rin_trueend_comp([((113,124),"normal"), ((177,129),"smile")])
-    image ev rin_trueend_weaksmile = rin_trueend_comp([((113,124),"normal"), ((177,129),"weaksmile")])
-    image ev rin_trueend_hug = rin_trueend_comp([((335,51),"hug")])
-    image ev rin_trueend_hugclosed = rin_trueend_comp([((335,51),"hug"), ((484,154), "hugclosed")])
+    image ev rin_trueend_normal = rin_trueend_comp([((203,223),"normal")])
+    image ev rin_trueend_closed = rin_trueend_comp([((203,223),"normal"), ((318,232),"closed")])
+    image ev rin_trueend_sad = rin_trueend_comp([((203,223),"normal"), ((318,232),"sad")])
+    image ev rin_trueend_smile = rin_trueend_comp([((203,223),"normal"), ((318,232),"smile")])
+    image ev rin_trueend_weaksmile = rin_trueend_comp([((203,223),"normal"), ((318,232),"weaksmile")])
+    image ev rin_trueend_hug = rin_trueend_comp([((603,92),"hug")])
+    image ev rin_trueend_hugclosed = rin_trueend_comp([((603,92),"hug"), ((871,277), "hugclosed")])
 
     image ev rin_wet_pan_down = "event/rin_wet/rin_wet_pan_down.jpg"
     image ev rin_wet_arms = "event/rin_wet/rin_wet_arms.jpg"
@@ -1480,39 +1480,39 @@ init 1:
     image rp_rin smile = "event/rin_pair/rin_pair_rin_smile.png"
     image rp_rin talk = "event/rin_pair/rin_pair_rin_talk.png"
 
-    $ d_rin_h2_pan_surprise = im.Composite((1440,900),
+    $ d_rin_h2_pan_surprise = im.Composite((1440,1620),
                                            (0,0), "event/rin_h2/rin_h2_u_surprise.jpg",
-                                           (0,300), "event/rin_h2/rin_h2_l_pan.jpg")
+                                           (0,540), "event/rin_h2/rin_h2_l_pan.jpg")
     image evh rin_h2_pan_surprise = d_rin_h2_pan_surprise
     image unlock_evh rin_h2_pan_surprise = im.Crop(d_rin_h2_pan_surprise,0,0,1440,1080)
 
-    $ d_rin_h2_pan_away = im.Composite((1440,900),
+    $ d_rin_h2_pan_away = im.Composite((1440,1620),
                                        (0,0), "event/rin_h2/rin_h2_u_away.jpg",
-                                       (0,300), "event/rin_h2/rin_h2_l_pan.jpg")
+                                       (0,540), "event/rin_h2/rin_h2_l_pan.jpg")
     image evh rin_h2_pan_away = d_rin_h2_pan_away
     image unlock_evh rin_h2_pan_away = im.Crop(d_rin_h2_pan_away,0,0,1440,1080)
 
-    $ d_rin_h2_pan_closed = im.Composite((1440,900),
+    $ d_rin_h2_pan_closed = im.Composite((1440,1620),
                                          (0,0), "event/rin_h2/rin_h2_u_closed.jpg",
-                                         (0,300), "event/rin_h2/rin_h2_l_pan.jpg")
+                                         (0,540), "event/rin_h2/rin_h2_l_pan.jpg")
     image evh rin_h2_pan_closed = d_rin_h2_pan_closed
     image unlock_evh rin_h2_pan_closed = im.Crop(d_rin_h2_pan_closed,0,0,1440,1080)
 
-    image evh rin_h2_nopan_closed = im.Composite((1440,900),
+    image evh rin_h2_nopan_closed = im.Composite((1440,1620),
                                      (0,0), "event/rin_h2/rin_h2_u_closed.jpg",
-                                     (0,300), "event/rin_h2/rin_h2_l_nopan.jpg")
+                                     (0,540), "event/rin_h2/rin_h2_l_nopan.jpg")
 
-    image evh rin_h2_hisao_surprise = im.Composite((1440,900),
+    image evh rin_h2_hisao_surprise = im.Composite((1440,1620),
                                      (0,0), "event/rin_h2/rin_h2_u_surprise.jpg",
-                                     (0,300), "event/rin_h2/rin_h2_l_hisao.jpg")
+                                     (0,540), "event/rin_h2/rin_h2_l_hisao.jpg")
 
-    image evh rin_h2_hisao_away = im.Composite((1440,900),
+    image evh rin_h2_hisao_away = im.Composite((1440,1620),
                                      (0,0), "event/rin_h2/rin_h2_u_away.jpg",
-                                     (0,300), "event/rin_h2/rin_h2_l_hisao.jpg")
+                                     (0,540), "event/rin_h2/rin_h2_l_hisao.jpg")
 
-    image evh rin_h2_hisao_closed = im.Composite((1440,900),
+    image evh rin_h2_hisao_closed = im.Composite((1440,1620),
                                      (0,0), "event/rin_h2/rin_h2_u_closed.jpg",
-                                     (0,300), "event/rin_h2/rin_h2_l_hisao.jpg")
+                                     (0,540), "event/rin_h2/rin_h2_l_hisao.jpg")
 
     python:
         def rin_h_comp(im_in, is_close=False):
