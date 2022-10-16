@@ -1724,7 +1724,7 @@ emi "Hey, what the hell are you doing?"
 
 play music music_comedy fadein 0.5
 
-hi "Having break er, lunch."
+hi "Having break... er, lunch."
 
 show emi sad_annoyed onlayer master at center
 with charachange
@@ -3401,7 +3401,7 @@ with locationchange
 
 "The heat, though, is another matter entirely. Sitting in one place for so long has focused my mind on how annoyingly humid it's getting, now that the hottest part of the day is here."
 
-"I'd better get moving if I{w=.5}{nw}"
+"I'd better get moving if I-{w=.5}{nw}"
 
 play sound sfx_warningbell
 
@@ -3661,7 +3661,7 @@ li "If you say it's okay, then I suppose so..."
 show lilly basic_reminisce onlayer master
 with charachange
 
-li "But, if you need any help"
+li "But, if you need any help-"
 
 "Student" "Then we'll call you. Go on, we'll be fine."
 
