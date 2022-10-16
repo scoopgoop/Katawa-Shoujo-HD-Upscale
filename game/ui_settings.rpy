@@ -4,7 +4,7 @@ init -1 python:
 
     Position = Transform
 
-    style.default.size = 36
+    style.default.size = 41
 
     layout.provides("load_save")
     layout.provides("yesno_prompt")
@@ -3290,7 +3290,7 @@ init python:
     style.say_window.yanchor = 288
 
     style.say_vbox.xpos = 15
-    style.say_vbox.spacing = 30
+    style.say_vbox.spacing = 20
 
 
     style.say_dialogue.first_indent = 25
