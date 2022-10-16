@@ -3244,8 +3244,8 @@ init python:
 
     renpy.image("mmcache",DynamicDisplayable(mm_static_bg))
 
-    
-    
+
+
     style.mm_root.background = DynamicDisplayable(mm_live_bg)
     style.create("mm_static", "mm_root")
     style.mm_static.background = DynamicDisplayable(mm_static_bg)
@@ -3289,7 +3289,8 @@ init python:
     style.say_window.yminimum = 160
     style.say_window.yanchor = 288
 
-    style.say_vbox.spacing = 15
+    style.say_vbox.xpos = 15
+    style.say_vbox.spacing = 30
 
 
     style.say_dialogue.first_indent = 25
