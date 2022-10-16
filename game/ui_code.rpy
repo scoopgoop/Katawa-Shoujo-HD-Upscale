@@ -741,7 +741,7 @@ init 2 python:
                 persistent.fpicker_yoffset = auto_offset * (len(displayed_slots) - 5)
 
             yadj = ui.adjustment(range=auto_offset * (len(displayed_slots) - 5), value=persistent.fpicker_yoffset, changed=store_yoffset)
-            vp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=720, ymaximum = 533, xpos=0, ypos = 2)
+            vp = ui.viewport(yadjustment=yadj, mousewheel=False, draggable=False, xmaximum=720, ymaximum = 563, xpos=0, ypos = 2)
             ui.vbox(xfill=True)
 
             maxname = 0
