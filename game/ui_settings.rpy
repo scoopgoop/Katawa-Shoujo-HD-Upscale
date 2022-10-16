@@ -3225,7 +3225,7 @@ init python:
                       ('tc_act1', (994, 851), '00_tc1-hisao.png')]
         basedelay = 0.07
         delay = basedelay * len (widget_map)
-        widget_list = [(1440,1080), (0,0), "ui/main/bg-main.png", (1600,1030),Text("modified to hd by yours truly <3"+"\n"+renpy.version(),color="#00000080", size=18, font="font/playtime.ttf")]
+        widget_list = [(1440,1080), (0,0), "ui/main/bg-main.png", (1305,1022),Text("All Credit to 4LS"+"\n"+renpy.version(),color="#00000080", size=18, font="font/playtime.ttf")]
         for trigger, offset, widget in widget_map:
             if persistent_seen(trigger) or has_devlvl():
                 widget_list.append(offset)
