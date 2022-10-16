@@ -3244,8 +3244,8 @@ init python:
 
     renpy.image("mmcache",DynamicDisplayable(mm_static_bg))
 
-    
-    
+
+
     style.mm_root.background = DynamicDisplayable(mm_live_bg)
     style.create("mm_static", "mm_root")
     style.mm_static.background = DynamicDisplayable(mm_static_bg)
@@ -3477,8 +3477,8 @@ init python:
     style.file_picker_entry.xminimum=684
     style.file_picker_entry.background = ib_base("ui/bt-scribble.png")
     style.file_picker_entry.hover_background = "ui/bt-scribble.png"
-    style.file_picker_entry.top_padding = 7
-    style.file_picker_entry.left_padding = 20
+    style.file_picker_entry.top_padding = 4
+    style.file_picker_entry.left_padding = 18
 
     style.vscrollbar.thumb_offset = -10
     style.vscrollbar.ymaximum = 450
