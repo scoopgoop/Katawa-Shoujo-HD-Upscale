@@ -18,7 +18,7 @@ init -3 python:
     displayDict["en"].sayfont = mainfont
 
     displayDict["en"].quote_outer_open = u"“"
-    displayDict["en"].quote_outer_close = u"” "
+    displayDict["en"].quote_outer_close = u"”"
     displayDict["en"].quote_inner_open = u"‘"
     displayDict["en"].quote_inner_close = u"’"
 
