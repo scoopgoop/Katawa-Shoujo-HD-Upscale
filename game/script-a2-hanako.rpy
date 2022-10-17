@@ -2548,7 +2548,7 @@ mi "Your work has been deemed sufficient. You may leave."
 
 hi "Well, thank you."
 
-hi "You know, if you stressed the “free meal’ side of things over the “endless workload’ side, you'd probably end up with more recruits."
+hi "You know, if you stressed the “free meal” side of things over the “endless workload” side, you'd probably end up with more recruits."
 
 stop music fadeout 6.0
 
@@ -3162,7 +3162,7 @@ li "Rules cannot remove human nature, after all, only suppress it."
 
 hi "I guess you're right. But when I first came here, everything was a bit of a shock."
 
-hi "I kept on making mistakes, or at least thinking I was making mistakes. Like when we first met, and I said “I see’ to you."
+hi "I kept on making mistakes, or at least thinking I was making mistakes. Like when we first met, and I said “I see” to you."
 
 hi "I didn't know if that was considered rude or anything, so I tried to just put it in the back of my mind. Treating people any differently and that kinda thing."
 
@@ -4294,7 +4294,7 @@ with charaenter
 
 ha "N-... it's nothing."
 
-hi "I've told you before, “nothing’ means “something’ when you say it like that."
+hi "I've told you before, “nothing” means “something” when you say it like that."
 
 show hanako cover_worry onlayer master
 with charachange

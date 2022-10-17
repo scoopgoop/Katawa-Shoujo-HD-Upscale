@@ -132,7 +132,7 @@ with shorttimeskip
 $ renpy.music.set_volume(0.3, 0.0, channel="ambient")
 play ambient sfx_crowd_indoors fadein 2.0
 
-"I cast my eyes across the caf� as the three of us step in. As usual, there are only a handful of people around at most, and the noise level is a quiet background hum."
+"I cast my eyes across the café as the three of us step in. As usual, there are only a handful of people around at most, and the noise level is a quiet background hum."
 
 scene bg suburb_shanghaiint onlayer master at left
 show hanako emb_emb onlayer master:
@@ -335,7 +335,7 @@ hi "Sure, I'd be happy to. Have you got any plans for what to do for her birthda
 show lilly basic_weaksmile_close onlayer master
 with charachange
 
-li "Hanako being Hanako, perhaps a low-key affair would be"
+li "Hanako being Hanako, perhaps a low-key affair would be-"
 
 show lilly basic_listen_close onlayer master
 with charachange
@@ -659,7 +659,7 @@ ha "Friends..."
 
 "From the tone of her voice and shrinking posture, it looks as though I've hit yet another landmine."
 
-"This is another reason why interacting with her is difficult; the self-imposed psychological barriers she puts up between herself and others, including me and, most likely, even Lilly. It's a shame that"
+"This is another reason why interacting with her is difficult; the self-imposed psychological barriers she puts up between herself and others, including me and, most likely, even Lilly. It's a shame that-"
 
 show hanako basic_bashful_close onlayer master
 with charachange
@@ -968,7 +968,7 @@ mk "To be honest, I think it's kind of cute. If you want to go for it, don't let
 
 hi "Thanks."
 
-"She may say that, but she was just talking about Hanako having issues. Still, I want to hold myself to the words I said. Hanako's problems don't matter; I'll deal with anything that comes up, because I want to help her."
+"She may say that, but she was just talking about Hanako having “issues.” Still, I want to hold myself to the words I said. Hanako's problems don't matter; I'll deal with anything that comes up, because I want to help her."
 
 "If there's even the smallest possibility that I can pull Hanako out of her depression and seclusion, then I should work towards that, no matter what. If she needs a prince, then I will be that prince."
 
@@ -1052,7 +1052,7 @@ with charachange
 
 mk "You'll get used to it, just give it some time. It's only a high school, just like any other."
 
-"She makes it sound so simple, but I've never thought about it that way. To me, Yamaku symbolized a marked shift in my life. I was no longer normal; I was different, and was to be educated with other different people."
+"She makes it sound so simple, but I've never thought about it that way. To me, Yamaku symbolized a marked shift in my life. I was no longer normal; I was “different,” and was to be educated with other “different” people."
 
 "And yet, I'm walking back to class and talking casually with a classmate during lunch, after watching some others play a soccer game - all perfectly normal. Maybe she has a point."
 
@@ -1271,7 +1271,7 @@ show lilly basic_smileclosed_cas_close onlayer master:
     ypos 1.1
 with charaenter
 
-"I'd pegged this caf� as the type to appeal to Lilly; small and quiet, but well-kept and somewhat upscale. Going by the dainty smile she wears, I... don't really know if I chose right."
+"I'd pegged this café as the type to appeal to Lilly; small and quiet, but well-kept and somewhat upscale. Going by the dainty smile she wears, I... don't really know if I chose right."
 
 "It's very, very rare to not see her smiling, after all."
 
@@ -1371,7 +1371,7 @@ hi "To be honest, I haven't thought much about that recently."
 
 hi "After my accident and subsequent months in hospital, enjoying my life here with you and Hanako has been enough for me."
 
-"In fact, I don't think I've thought at all about a future for some time now. It seems almost futile."
+"In fact, I don't think I've thought at all about a “future” for some time now. It seems almost futile."
 
 show lilly basic_sleepy_cas_close onlayer master
 with charachange
@@ -1449,7 +1449,7 @@ with charaenter
 
 li "I can't think that she'd have much of a need for that, and what type of message would that send to her?"
 
-hi "Um... cook more food? That's not such a bad idea, maybe..."
+hi "Um... “cook more food?” That's not such a bad idea, maybe..."
 
 show lilly cane_weaksmile_cas_close onlayer master
 with charachange
@@ -1470,7 +1470,7 @@ hi "What about a gift card then?"
 show lilly cane_listen_cas_close onlayer master
 with charachange
 
-li "There's nothing as impersonal as giving someone a gift card. It's like saying I don't know enough about you to work out what you'd like."
+li "There's nothing as impersonal as giving someone a gift card. It's like saying “I don't know enough about you to work out what you'd like.’"
 
 hi "I always thought of it as making sure they got what they wanted."
 
@@ -1509,10 +1509,10 @@ hi "Sounds good to me, though I wish you'd mentioned it earlier."
 show lilly cane_cheerful_cas_close onlayer master
 with charachange
 
-li "But if I did that, then you wouldnt have started thinking for yourself, would you?"
+li "But if I did that, then you wouldn't have started thinking for yourself, would you?"
 
 "Once again Lilly has a point. My brain is currently analyzing every store we pass for gift options. If Lilly had mentioned a doll shop to begin with I wouldn't have thought of anything else."
-
+                                                                                             
 $ renpy.music.set_volume(0.4, 1.0, channel="ambient")
 
 scene bg city_street4 onlayer master
@@ -1675,7 +1675,7 @@ li "Shall we be off, then?"
 
 "With a sigh, I pick myself up off the railing as well and have a brief look around. We have stuff to do, so I'll just try and get back to her about this later."
 
-"Tucked in between a newsstand and a convenience store is a small shop. The sign above the door reads Othello's Antiques in decorative English script."
+"Tucked in between a newsstand and a convenience store is a small shop. The sign above the door reads “Othello's Antiques” in decorative English script."
 
 "It would be easy to miss if we were walking along the street, but since we're stationary and I'm purposefully looking around, it's just noticeable."
 
@@ -3101,9 +3101,9 @@ with charachange
 
 li "I'm not altogether sure of exactly how she's faring at the moment, though last I heard she was stable. I'll be leaving Saturday; it's the earliest flight that I could get."
 
-"Stable. That's code for needs to stay in the hospital. I've been stable long enough to know that, and to know that it doesn't necessarily mean someone is in good condition, but merely treading water."
+"“Stable.” That's code for “needs to stay in the hospital.” I've been “stable” long enough to know that, and to know that it doesn't necessarily mean someone is in good condition, but merely treading water."
 
-"On the upside, stable is much better than critical condition. At least she's not on the brink of death."
+"On the upside, “stable” is much better than “critical condition.” At least she's not on the brink of death."
 
 hi "Stable... that's a relief."
 
@@ -3266,7 +3266,7 @@ ha "I don't... want that..."
 show lilly basic_surprised_ni onlayer master
 with charachange
 
-"Lilly and I are both surprised at Hanako mustering her courage. A half-mumbled Okay is all I can give her in reply, and I take her desk chair to sit in."
+"Lilly and I are both surprised at Hanako mustering her courage. A half-mumbled “Okay” is all I can give her in reply, and I take her desk chair to sit in."
 
 show lilly basic_concerned_ni onlayer master
 with charachange
@@ -3398,7 +3398,7 @@ hi "Are you all right?"
 
 li "I'm just a little tired. It's been... hectic recently."
 
-hi "Have you slept at all? A little tired sounds like an understatement, given how you look."
+hi "Have you slept at all? “A little tired” sounds like an understatement, given how you look."
 
 show lilly basic_sleepy onlayer master
 with charachange
@@ -3511,7 +3511,7 @@ mi "Did you see her last night?"
 
 hi "Yeah, Lilly and I talked to her."
 
-hi "Um, this may sound a bit weird, but can you tell Shizune thank you? From both me... and Lilly."
+hi "Um, this may sound a bit weird, but can you tell Shizune “thank you?” From both me... and Lilly."
 
 "I know Lilly technically didn't thank Shizune, but I could tell by her reaction last night that she wanted to. At least, that's how it works out in my head."
 
@@ -3526,7 +3526,7 @@ shi "..."
 show misha sign_confused_close onlayer master
 with charachange
 
-mi "Er... I think what Shicchan is trying to say is you're welcome."
+mi "Er... I think what Shicchan is trying to say is “you're welcome.’"
 
 "The furious signing and Shizune's reddened cheeks tell me that what she said was entirely different. Her blatantly flustered expression is amusing enough to make me chuckle."
 
@@ -3542,7 +3542,7 @@ with charachange
 
 mi "Wahahaha~! You're right~! Shicchan is really cute when she tries not to be!"
 
-"I notice that Misha decides not to sign her response to Shizune. Maybe Shizune's rage is enough of a counter to any quantity of cute."
+"I notice that Misha decides not to sign her response to Shizune. Maybe Shizune's rage is enough of a counter to any quantity of “cute.”"
 
 show shizu adjust_frown onlayer master
 with charachange
@@ -3854,7 +3854,7 @@ with charachange
 
 li "Shall I open one?"
 
-hi "Sure. I'll get some{w=0.3}{nw}"
+hi "Sure. I'll get some-{w=0.3}{nw}"
 
 $ renpy.music.set_volume(0.5, 0.5, channel="music")
 $ renpy.music.set_volume(1.0, 0.0, channel="sound")
@@ -4908,12 +4908,12 @@ with dissolvecharamove
 show shizu basic_sparkle onlayer master at center
 show misha perky_smile onlayer master at twoleft
 with charaenter
-
+ 
 play music music_happiness fadein 2.0
 
 "I grimace and turn towards the unmistakable voice coming from behind me. That was way too upbeat a tone of voice to feel comfortable, even from Misha."
 
-"Misha's happy smile is nothing out of the usual. Shizune's, though, is a very bad sign. The one she wears has become notched into my brain as her I have got you seven ways from Sunday smile."
+"Misha's happy smile is nothing out of the usual. Shizune's, though, is a very bad sign. The one she wears has become notched into my brain as her “I have got you seven ways from Sunday” smile."
 
 hi "Hi Shizune, Misha. You uh... you look happy to see me."
 
@@ -5127,7 +5127,7 @@ $ renpy.music.set_volume(1.0, 1.0, channel="music")
 
 "And so, that's that. Our relationship is over. Nice, neat, and tidy, with no ambiguity."
 
-"I hadn't held on to any illusions that it could ever begin anew. The last time she visited me, neither of us said a thing, except for the one word she said as she left for the last time. Goodbye."
+"I hadn't held on to any illusions that it could ever begin anew. The last time she visited me, neither of us said a thing, except for the one word she said as she left for the last time. “Goodbye.”"
 
 "Be that as it may... this feels more final. The capstone on an experiment that both of us tried, and failed at."
 
@@ -5378,7 +5378,7 @@ play music music_jazz fadein 14.0
 scene bg city_street3_ni onlayer master
 with locationchange
 
-"We keep walking, and I notice that we're passing more and more caf�s, restaurants, and other eateries."
+"We keep walking, and I notice that we're passing more and more cafés, restaurants, and other eateries."
 
 "Every once in a while a drunken man in a suit comes out of a bar, usually being supported by another, but for the most part the customers around this part of the city look young and fashionable."
 
@@ -5538,7 +5538,7 @@ show lilly basic_cheerful_cas onlayer master:
     xpos 0.25 ypos 1.1
 with charachange
 
-li "May I have a glass of cham{w=0.5}{nw}"
+li "May I have a glass of cham-{w=0.5}{nw}"
 
 show lilly basic_surprised_cas onlayer master
 show akira basic_boo onlayer master
@@ -6163,7 +6163,7 @@ ha "W-will your accent... be a problem?"
 show lilly basic_smile_cas onlayer master
 with charachange
 
-li "I wouldnt worry about that too much. It may be an issue initially, but I should be fine once I get used to it."
+li "I wouldn't worry about that too much. It may be an issue initially, but I should be fine once I get used to it."
 
 show hanako basic_worry_cas onlayer master at Position(ypos=1.14)
 show lilly basic_smileclosed_cas onlayer master at Position(ypos=1.17)
@@ -6497,7 +6497,7 @@ with dissolvecharamove
 
 "Hanako strikes out into the store, gazing in wonder at the various items on display. She finds the doll section, and spends lingering minutes studying each and every one."
 
-"It's a side of Hanako I've only barely been introduced to. I was astonished when Lilly said she liked dolls, and even more so to find her collection sitting on her dresser."
+"It's a side of Hanako I've only barely been introduced to. I was astonished when Lilly said she liked dolls, and even more so to find her “collection” sitting on her dresser."
 
 show hanako basic_normal_cas_close onlayer master at center
 with charaenter

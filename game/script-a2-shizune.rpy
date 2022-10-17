@@ -2352,7 +2352,7 @@ mi "Hicchan, do you hate games where luck is involved?"
 show misha hips_grin onlayer master
 with charachange
 
-mi "\“I don't like games that revolve around luck of the draw,’ right? That was you, Hicchan~."
+mi "\“I don't like games that revolve around luck of the draw,” right? That was you, Hicchan~."
 
 hi "Yeah. Revolving around luck isn't the same as just having luck involved, though. I don't hate games just for having an element of luck. Most games have an element of luck to them anyway. It's what keeps them interesting."
 
@@ -3209,7 +3209,7 @@ hi "AAAAAAAAAAHHH!!"
 
 hi "Do you know how stupid I look now? I sat there for like half the damn day acting like I couldn't read sign language, and are you seriously telling me that she knew the whole time I could?"
 
-hi "She was probably thinking, \“this guy is a complete jackass, pretending he can't understand me.’ I just made a total ass of myself."
+hi "She was probably thinking, \“this guy is a complete jackass, pretending he can't understand me.” I just made a total ass of myself."
 
 hi "How could you let me do this?!"
 
@@ -3748,7 +3748,7 @@ ke "That's what I said."
 show kenji rage onlayer master
 with charachange
 
-ke "Then I added a cry of \“They can take our things, but they'll never take our freeeeeedoooooom!’ to appeal to the masses like in that movie about the life of William Wallace where they took his things but not his freedom, and then killed him."
+ke "Then I added a cry of \“They can take our things, but they'll never take our freeeeeedoooooom!” to appeal to the masses like in that movie about the life of William Wallace where they took his things but not his freedom, and then killed him."
 
 stop music fadeout 5.0
 
@@ -4209,7 +4209,7 @@ with charachange
 show shizu behind_frustrated_ss onlayer master
 with charachange
 
-ssh "Two fights that you know of aren't worth calling \“so much.’ If you had been here last year you could say that."
+ssh "Two fights that you know of aren't worth calling \“so much.” If you had been here last year you could say that."
 
 his "I heard it was a rough year. Something about how you tried to institute a badge policy."
 
@@ -4956,7 +4956,7 @@ with charachange
 
 ssh "Of course."
 
-hi "What do you mean \“of course?’ You didn't dress up last time."
+hi "What do you mean \“of course?” You didn't dress up last time."
 
 show shizu basic_normal2_close onlayer master
 with charachange
