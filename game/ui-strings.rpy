@@ -11,9 +11,9 @@ init -3 python:
                                         "line_spacing": 0}
 
     displayDict["en"].timeformat = "%b %d, %H:%M"
-    
-    displayDict["en"].selector_padding = 0 
-    displayDict["en"].nvl_paragraph_distance = 10 
+
+    displayDict["en"].selector_padding = 0
+    displayDict["en"].nvl_paragraph_distance = 10
 
     displayDict["en"].sayfont = mainfont
 
@@ -208,7 +208,7 @@ init -3 python:
                                     ("Short Sharp Shock", "A11_1", "On his way to lunch alongside Misha and Shizune, Hisao collides with Emi in the hallway.", "Act 1"),
                                     ("Meet Cute", "A11_2", "Hisao collides with a rampaging Emi on his way to lunch with Hanako and Lilly.", "Act 1"),
                                     ("Detour Ahead", "A12", "Shizune and Misha take Hisao to their favourite teahouse, the Shanghai.", "Act 1"),
-                                    ("Sip (Part 1)", "A13", "Hisao has a peaceful lunch with Lilly and Hanako.", "Act 1"), 
+                                    ("Sip (Part 1)", "A13", "Hisao has a peaceful lunch with Lilly and Hanako.", "Act 1"),
                                     ("It Builds Character", "A15", "Mutou tries to have a D&M talk with Hisao, but Misha interrupts and puts Hisao to work.", "Act 1"),
                                     ("A Private Lunch", "A16", "Searching for supplies, Hisao happens across a strange girl in the art room.", "Act 1"),
                                     ("Waylay", "A17", "While helping Rin carry some paint, Hisao is quizzed by the nurse.", "Act 1"),
@@ -224,7 +224,7 @@ init -3 python:
                                     ("Exercise", "A25", "Another early morning sees Hisao running at the track with Emi.", "Act 1"),
                                     ("Invisible Hat", "A26", "Kenji gives Hisao a few insider tips on how to socialize.", "Act 1"),
                                     ("Home Field Advantage", "A26_1", "Shizune and Misha hijack Hisao as he leaves his room for class.", "Act 1"),
-                                    ("No Recovery", "A27", False, "Act 1"), 
+                                    ("No Recovery", "A27", False, "Act 1"),
                                     ("Slow Recovery", "A27_1", "Recovering from his heart flutter, Hisao eventually makes it to class.", "Act 1"),
                                     ("No Recovery", "A27_2", "Hisao struggles to class after his hijacking by the Student Council.", "Act 1"),
                                     ("No Free Lunch", "A28", "Hisao is escorted to the student council office for his first official day there.", "Act 1"),
@@ -240,7 +240,7 @@ init -3 python:
                                     ("Don't Panic", "A38", "After waking up on the day of the festival, Hisao is greeted by a ranting Kenji.", "Act 1"),
                                     ("Is Carnival!", "A39", "Emi catches Hisao eating fried food and makes him accompany her as punishment.", "Act 1"),
                                     ("Nc5xb3", "A42", "Unable to help Lilly at her stall, Hisao searches for Hanako at the festival.", "Act 1"),
-                                    ("Movement", "H2", "Lilly finishes her duties and treats Hanako and Hisao to tea at the Shanghai.", "Act 1"), 
+                                    ("Movement", "H2", "Lilly finishes her duties and treats Hanako and Hisao to tea at the Shanghai.", "Act 1"),
                                     ("Promise of Time", "A41", "After a trying morning at her stall, Hisao takes Lilly to find Hanako.", "Act 1"),
                                     ("Clouds in My Head", "A40", "Hisao keeps Rin and her now-finished mural company.", "Act 1"),
                                     ("Throwing Balls", "A44", "True to his word, Hisao spends the day with Shizune and Misha.", "Act 1"),
@@ -267,7 +267,7 @@ init -3 python:
                                     ("Up, Down, and Up Again", "E20", "A frantic call from Emi brings Hisao to her room, where two surprises await him.", ("Act 3","Emi")),
                                     ("Storage Space", "E21", "Emi coaxes Hisao into the track storage shed.", ("Act 3","Emi")),
                                     ("After-School Plans", "E22", "Emi has a serious talk with Hisao about the incoming exams.", ("Act 3","Emi")),
-                                    ("Detached", "E23", "Hisao broods about his relationship with Emi.", ("Act 3","Emi")), 
+                                    ("Detached", "E23", "Hisao broods about his relationship with Emi.", ("Act 3","Emi")),
                                     ("Phantom Pain", "E24", "Hisao's attempt to show Emi his concern doesn't go nearly as well as he hoped.", ("Act 3","Emi")),
                                     ("Debate Expresses Doubt", "E25", "Hisao is confused by Emi's behavior and by an invitation to her house.", ("Act 3","Emi")),
                                     (u"Guess Who's Coming... Never Mind", "E26", "Dinner at the Ibarazaki's.", ("Act 3","Emi")),
@@ -382,11 +382,11 @@ init -3 python:
                                     ("Act 4: Dream", rp_actmark, rp_actmark, ("Act 4","Rin")),
                                     ("Illusions for People", "R30", "Hisao talks about his misgivings to Nomiya, to little effect.", ("Act 4","Rin")),
                                     ("Demused", "R31", "Hisao's patience comes to an end.", ("Act 4","Rin")),
-                                    ("The Scene", "R32", "Meeting with Rin at the exhibition opening.", ("Act 4","Rin")), 
+                                    ("The Scene", "R32", "Meeting with Rin at the exhibition opening.", ("Act 4","Rin")),
                                     ("Wavelength", "R35", "Hisao lethargically whiles away the last day of exams.", ("Act 4","Rin")),
                                     ("Blue Period", "R36", "A rainy day, the 22nd Corner, and a brief history of Picasso.", ("Act 4","Rin")),
                                     ("The World Only You Can See", "R37", "Rin and Hisao part after the rain.", ("Act 4","Rin")),
-                                    ("Desperate Glory", "R34", "A frantic Nomiya queries Hisao about Rin's whereabouts.", ("Act 4","Rin")), 
+                                    ("Desperate Glory", "R34", "A frantic Nomiya queries Hisao about Rin's whereabouts.", ("Act 4","Rin")),
                                     ("Problems of Self-Referential Logic", "R38", "Hisao finds Rin in her hiding place, and convinces her to reconcile with Nomiya.", ("Act 4","Rin")),
                                     ("Measuring Shadows", "R39", "Rin's apology to the art teacher isn't well-received.", ("Act 4","Rin")),
                                     (u"Raison d'etre", "R40", "Hisao comforts an upset Rin.", ("Act 4","Rin")),
@@ -411,7 +411,7 @@ init -3 python:
                                     ("Closer", "S22", "Shizune and Hisao join together for the first time.", ("Act 3","Shizune")),
                                     ("Confrontation", "S23", "Jigoro belittles the Student Council and Hisao rises up to the challenge.", ("Act 3","Shizune")),
                                     ("The Anchor", "S24", "Back to Yamaku. A letter from Iwanako prompts a lengthy discussion from Kenji on the finer points of girlfriends.", ("Act 3","Shizune")),
-                                    ("Roadmap", "S25", "The Student Council worries about their replacement, and Hisao ends up treating Misha to a parfait somehow.", ("Act 3","Shizune")), 
+                                    ("Roadmap", "S25", "The Student Council worries about their replacement, and Hisao ends up treating Misha to a parfait somehow.", ("Act 3","Shizune")),
                                     ("Acute Triangle", "S26", "An afternoon of work with Shizune shows Hisao that something is amiss between the girls.", ("Act 3","Shizune")),
                                     ("Dewey Decimated", "S27", "Yuuko gets Hisao to watch the library for her. The arrival of Kenji makes the attempt meet with mixed success.", ("Act 3","Shizune")),
                                     ("Tongue-Tied", "S28", "Misha visits Hisao in his room, and things go in an unexpected direction.", ("Act 3","Shizune")),
@@ -422,10 +422,10 @@ init -3 python:
                                     ("Off by One", "S31", "A failed attempt to cheer up Misha gets converted into an impromptu date for Hisao and Shizune.", ("Act 4","Shizune")),
                                     ("Invasion", "S32", "Jigoro and Hideaki pay Shizune an unexpected and somewhat unpleasant visit.", ("Act 4","Shizune")),
                                     ("Parfait", "S33", "Hisao and Shizune stalk Misha. Hisao finally manages to corner her and discuss things properly.", ("Act 4","Shizune")),
-                                    ("Present Tense", "S38", "Hisao stumbles into Lilly at lunch, and the two talk about Shizune.", ("Act 4","Shizune")), 
+                                    ("Present Tense", "S38", "Hisao stumbles into Lilly at lunch, and the two talk about Shizune.", ("Act 4","Shizune")),
                                     ("Spiral", "S39", "Runaround, stonewalling, and Kenji nighttime ambush.", ("Act 4","Shizune")),
                                     ("Terminal", "S40", "An early-morning talk with Shizune in the silent school.", ("Act 4","Shizune")),
-                                    ("The Summit", "S34", "Kenji and Shizune meet in Hisao's room. Miraculously, nothing explodes.", ("Act 4","Shizune")), 
+                                    ("The Summit", "S34", "Kenji and Shizune meet in Hisao's room. Miraculously, nothing explodes.", ("Act 4","Shizune")),
                                     ("Succession", "S35", "The current Student Council shapes up their successors before engaging in 'extracurricular activities.'", ("Act 4","Shizune")),
                                     ("Sneaking Mission", "S36", "The show of Misha's determination spurs Shizune to set her sights on greater things.", ("Act 4","Shizune")),
                                     ("Infinity", "S37", "Our trio renews their friendship, with their graduation looming close ahead.", ("Act 4","Shizune")),
