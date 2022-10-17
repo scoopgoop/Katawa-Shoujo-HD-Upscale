@@ -1024,14 +1024,14 @@ shi "..."
 show misha hips_grin onlayer master
 with charachange
 
-mi "She says that only counts for council members. Since you declined, she doesnt owe you anything."
+mi "She says that only counts for council members. Since you declined, she doesn't owe you anything."
 
 show misha hips_grin_close onlayer master
 with characlose
 
 "Misha leans closer, and whispers conspiratorially into my ear."
 
-mi "Actually, I think she's just a little sore that you didnt spend the day with her."
+mi "Actually, I think she's just a little sore that you didn't spend the day with her."
 
 show misha hips_smile_close onlayer master
 with charachange
@@ -1210,7 +1210,7 @@ with charaenter
 
 "And, as Hanako and I pass through the gates, I notice that she closes the distance between us."
 
-"Not enough to be considered 'close', but she certainly isn't at her usual just-a-little-far position."
+"Not enough to be considered “close”, but she certainly isn't at her usual just-a-little-far position."
 
 "I guess we're not familiar enough for her to get as close as she does with Lilly."
 
@@ -1252,7 +1252,7 @@ with charachange
 
 ha "Y-yes. With Lilly."
 
-"Of course. 'With Lilly.' I wonder, has she ever left the school without her?"
+"Of course. “With Lilly.” I wonder, has she ever left the school without her?"
 
 "It doesn't seem like much at first glance, but Hanako's dependence on Lilly is absurdly heavy."
 
@@ -2326,7 +2326,7 @@ with charachange
 
 mi "Have there been any fireworks? Any gossip that you're withholding from me~?"
 
-hi "If I told you about my own circumstances, it wouldnt be gossip, would it?"
+hi "If I told you about my own circumstances, it wouldn't be gossip, would it?"
 
 show misha perky_confused onlayer master
 with charachange
@@ -2548,7 +2548,7 @@ mi "Your work has been deemed sufficient. You may leave."
 
 hi "Well, thank you."
 
-hi "You know, if you stressed the 'free meal' side of things over the 'endless workload' side, you'd probably end up with more recruits."
+hi "You know, if you stressed the “free meal’ side of things over the “endless workload’ side, you'd probably end up with more recruits."
 
 stop music fadeout 6.0
 
@@ -2745,7 +2745,7 @@ with charamove
 
 
 
-"Towards the end of the aisle, between a book on card tricks and some book on kid's games, stands a single book bearing the title 'Chess Tactics for Champions'."
+"Towards the end of the aisle, between a book on card tricks and some book on kid's games, stands a single book bearing the title “Chess Tactics for Champions.”"
 
 show hanako basic_bashful onlayer master
 with charachange
@@ -3085,7 +3085,7 @@ with charachange
 
 li "Hisao, do you mind if I ask you a question?"
 
-"Damn. All I want is a little food and about four hours of sleep. And nobody says 'can I ask you a question' for a simple question."
+"Damn. All I want is a little food and about four hours of sleep. And nobody says “can I ask you a question” for a simple question."
 
 hi "Sure."
 
@@ -3162,7 +3162,7 @@ li "Rules cannot remove human nature, after all, only suppress it."
 
 hi "I guess you're right. But when I first came here, everything was a bit of a shock."
 
-hi "I kept on making mistakes, or at least thinking I was making mistakes. Like when we first met, and I said 'I see' to you."
+hi "I kept on making mistakes, or at least thinking I was making mistakes. Like when we first met, and I said “I see’ to you."
 
 hi "I didn't know if that was considered rude or anything, so I tried to just put it in the back of my mind. Treating people any differently and that kinda thing."
 
@@ -3441,7 +3441,7 @@ with charaenter
 
 "It looks odd when contrasted with Lilly's plain but generally sophisticated-looking furniture, which leads me to think that Hanako might have picked it out."
 
-"There is a slight 'ting' when Hanako accidentally clips the teapot on a cup as she is pouring."
+"There is a slight “ting” when Hanako accidentally clips the teapot on a cup as she is pouring."
 
 show hanagown worry onlayer master
 show lilly basic_displeased_paj onlayer master
@@ -3515,7 +3515,7 @@ with charachange
 
 "Hanako's smile returns, redoubled."
 
-"Even with her blighted face, her shy smile couldn't be called anything but 'cute'."
+"Even with her blighted face, her shy smile couldn't be called anything but “cute”."
 
 show hanagown distant_blush onlayer master
 with charachange
@@ -4294,7 +4294,7 @@ with charaenter
 
 ha "N-... it's nothing."
 
-hi "I've told you before, 'nothing' means 'something' when you say it like that."
+hi "I've told you before, “nothing’ means “something’ when you say it like that."
 
 show hanako cover_worry onlayer master
 with charachange
