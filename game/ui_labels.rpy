@@ -219,7 +219,7 @@ label prefs_screen:
         prefs_looped = False
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
 
-        group_spacing = 30
+        group_spacing = 26
 
         ui.vbox(xpos = 324, ypos = 216)
         ui.text(displayStrings.config_page_caption, style="page_caption")
@@ -253,6 +253,7 @@ label prefs_screen:
         ui.null(height=group_spacing)
         widget_button(displayStrings.config_language_sel, "ui/bt-language.png", ui.jumps("language_screen"), xsize=540, widgetyoffset=5)
         if renpy.display.joystick.enabled:
+            ui.null(height=group_spacing)
             widget_button(displayStrings.config_gamepad_label, "ui/bt-gamepad.png", ui.jumps("joystick_screen"), xsize=540, widgetyoffset=5)
 
 
@@ -346,7 +347,7 @@ label joystick_screen:
         ui.image(style.gm_root.background)
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
         layout.navigation(None)
-        ui.vbox(xpos = 180, ypos = 120)
+        ui.vbox(xpos = 324, ypos = 216)
         ui.text(displayStrings.gamepad_caption, style="page_caption")
         ui.null(height=8)
         ui.hbox()

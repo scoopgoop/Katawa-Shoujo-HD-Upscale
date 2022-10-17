@@ -3,7 +3,7 @@
 
 
 init -1 python:
-    
+
     def is_glrenpy():
         if int(renpy.version().split(".")[1]) > 10:
             return True
@@ -919,9 +919,9 @@ init 2 python:
                 return True
 
             if disabled:
-                widget_button(self.name, checkboximage, clicked, xsize=325, widgetyoffset=0, state="disabled")
+                widget_button(self.name, checkboximage, clicked, xsize=500, widgetyoffset=0, state="disabled")
             else:
-                widget_button(self.name, checkboximage, clicked, xsize=325, widgetyoffset=0)
+                widget_button(self.name, checkboximage, clicked, xsize=500, widgetyoffset=0)
 
     class customSliderPreference(object):
 
@@ -931,8 +931,8 @@ init 2 python:
             self.get = get
             self.set = set
             self.enable = enable
-            
-            
+
+
 
             config.all_preferences[name] = self
 
