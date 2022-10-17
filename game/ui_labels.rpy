@@ -77,7 +77,7 @@ label text_history_gm:
             lines_to_show = []
         elif current_line and len(readback_buffer) == 0:
             lines_to_show = [current_line]
-        elif current_line and current_line != readback_buffer[-1]:  
+        elif current_line and current_line != readback_buffer[-1]:
             lines_to_show = readback_buffer + [current_line]
         else:
             lines_to_show = readback_buffer
@@ -146,7 +146,7 @@ label gm_image:
         ui.interact()
 
         renpy.transition(config.intra_transition)
-        renpy.jump(_game_menu_screen) 
+        renpy.jump(_game_menu_screen)
 
 label quit_from_os:
 
@@ -189,7 +189,7 @@ label confirm_mm:
                 renpy.music.stop()
                 renpy.full_restart(transition=config.game_main_transition)
             else:
-                renpy.jump(_game_menu_screen) 
+                renpy.jump(_game_menu_screen)
         else:
             renpy.music.stop()
             renpy.full_restart(transition=config.game_main_transition)
@@ -212,11 +212,11 @@ label prefs_screen:
             renpy.transition(config.main_game_transition)
         else:
             renpy.transition(config.intra_transition)
-        if mm_context(): 
+        if mm_context():
             ui.image(style.mm_static.background)
         coming_from_prefs_sub = False
         ui.image(style.gm_root.background)
-        prefs_looped = False 
+        prefs_looped = False
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
 
         group_spacing = 30
@@ -252,7 +252,7 @@ label prefs_screen:
         ui.close()
         ui.null(height=group_spacing)
         widget_button(displayStrings.config_language_sel, "ui/bt-language.png", ui.jumps("language_screen"), xsize=540, widgetyoffset=5)
-        if renpy.display.joystick.enabled: 
+        if renpy.display.joystick.enabled:
             widget_button(displayStrings.config_gamepad_label, "ui/bt-gamepad.png", ui.jumps("joystick_screen"), xsize=540, widgetyoffset=5)
 
 
@@ -287,7 +287,7 @@ label language_screen:
         coming_from_prefs_sub = True
 
         renpy.transition(config.intra_transition)
-        if mm_context(): 
+        if mm_context():
             ui.image(style.mm_static.background)
         ui.image(style.gm_root.background)
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
@@ -300,13 +300,13 @@ label language_screen:
         ui.vbox()
 
         for language in available_languages:
-            
+
             tl_progress = make_percentage(len(displayDict[language].s_scenes), len(displayDict[master_language].s_scenes))
             if tl_progress >= 100:
                 tl_percentage = ""
             else:
                 tl_percentage = ", " + str(tl_progress) + "%"
-            
+
             if language == persistent.current_language:
                 button_label = displayDict[language].activeLanguage
                 button_state = "active"
@@ -341,7 +341,7 @@ label joystick_screen:
     python:
         coming_from_prefs_sub = True
         renpy.transition(config.intra_transition)
-        if mm_context(): 
+        if mm_context():
             ui.image(style.mm_static.background)
         ui.image(style.gm_root.background)
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
@@ -376,7 +376,7 @@ label load_screen:
 label load_screen_loop:
 
     python:
-        if mm_context(): 
+        if mm_context():
             mybackground = LiveComposite((1440, 1080),
                                          (0, 0), style.mm_static.background,
                                          (0, 0), style.gm_root.background,
@@ -406,7 +406,7 @@ label load_screen_loop:
             if mm_context():
                 background = style.mm_static.background
             if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image("ui/sd-emi.png",xpos=918,ypos=495), background=background):
-                
+
                 renpy.unlink_save(exists)
         else:
             if not mm_context() and playthroughflag and statechangesincesave:
@@ -440,7 +440,7 @@ label save_screen:
                 renpy.jump(_game_menu_screen)
         elif _fn == "delete":
             if _yesno_prompt(None, displayStrings.yesno_delete_savegame, im.Image("ui/sd-emi.png",xpos=918,ypos=495)):
-                
+
                 renpy.unlink_save(_exists)
         else:
             if not _exists or _yesno_prompt(None, displayStrings.yesno_save_overwrite, im.Image("ui/sd-lilly.png",xpos=351,ypos=495)):
@@ -461,7 +461,7 @@ label save_screen:
                 else:
                     statechangesincesave = False
                     persistent.fpicker_yoffset = -1
-                    
+
                     _prompt(None, displayStrings.yesno_savesuccess, im.Image("ui/sd-rin.png",xpos=918,ypos=297))
                 renpy.jump(_game_menu_screen)
         renpy.jump("save_screen")
@@ -547,19 +547,19 @@ label video_menu:
 
         ui.grid(3,2, padding=36, xpos=63, ypos=99)
         for this_video in displayStrings.videos:
-            
+
             this_tn = this_video[1].replace(".mkv", "_tn.jpg")
-            
+
             button_base = LiveComposite((198, 153),
                                         (0, 0), ib_base("ui/bt-cg-locked.png"),
                                         (9, 9), im.MatrixColor(this_tn, im.matrix.desaturate()))
             button_hover = LiveComposite((198, 153),
                                          (0, 0), "ui/bt-cg-locked.png",
                                          (9, 9), this_tn)
-            
-            
+
+
             if this_video[1] in persistent.seen_videos or has_devlvl():
-                
+
                 ui.imagebutton(button_base,
                                button_hover,
                                clicked=ui.returns(this_video[1]))
@@ -673,7 +673,7 @@ label scene_select_loop:
 
         if scrollable:
             auto_offset = 1.0 / (len(available_scenes) - 8)
-            
+
             auto_offset = 60
         else:
             auto_offset = 0
@@ -697,11 +697,11 @@ label scene_select_loop:
                 label = displayStrings.name_li
             elif button == "Rin":
                 label = displayStrings.name_rin
-            else: 
+            else:
                 label = displayStrings.name_shi
-            
+
             path = button
-            
+
             if button == filter:
                 layout.button(label, "rpa_active", clicked=None)
             elif get_available_scenes(path):
@@ -786,10 +786,10 @@ label scene_select_loop:
 
         readback_buffer = []
         if what not in ("_setfilter", "_pt_toggled"):
-            
-            
-            
-            
+
+
+
+
             init_vars()
             last_scene_label = where
             renpy.music.stop(fadeout=0.5)
@@ -798,13 +798,13 @@ label scene_select_loop:
             renpy.show("black")
             renpy.block_rollback()
             ui.timer(1.0, ui.returns, kwargs={"value":True})
-            ui.interact() 
+            ui.interact()
             save_name = where
             if playthroughflag or not renpy.has_label("replay_"+where):
                 jumptarget = where
             else:
                 jumptarget = "replay_"+where
-            ui.jumpsoutofcontext(jumptarget)() 
+            ui.jumpsoutofcontext(jumptarget)()
         elif what == "_setfilter":
             filter = where
             persistent.spicker_yoffset = 0
@@ -832,7 +832,7 @@ label cg_gallery:
         for i_image in ex_g_images:
             if i == 0:
                 page += 1
-                
+
                 mygallery.page(str(page))
                 i = 0
             mygallery.autobutton(i_image)
@@ -1001,10 +1001,10 @@ init 5 python:
     def skipcredits_overlay():
         if not show_skipcredits_button:
             return
-        
+
         def clicked():
             renpy.jump("after_credits")
-        
+
         ui.keymap(K_ESCAPE=clicked)
         ui.textbutton("{color=#000}Skip{/color}",clicked=clicked, xpos=1432, xanchor=1.0, ypos=1072, yanchor=1.0, xpadding=6,
                       background=RoundRect((48, 48, 48, 255), 6),
