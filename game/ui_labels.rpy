@@ -207,7 +207,7 @@ label prefs_screen:
 
         layout.navigation(None)
         if prefs_looped:
-            renpy.transition(ImageDissolve(im.Tile("ui/tr-checkwipe.png"), 0.5, 8))
+            renpy.transition(ImageDissolve(im.Tile("ui/tr-checkwipe.png"), 0.0, 8))
         elif (mm_context() or entered_from_game) and not coming_from_prefs_sub:
             renpy.transition(config.main_game_transition)
         else:
