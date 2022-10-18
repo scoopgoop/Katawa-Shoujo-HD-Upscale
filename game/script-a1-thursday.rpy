@@ -1957,7 +1957,7 @@ mi "Hahaha, you know, my horoscope said it'd be a good day for me today."
 show misha perky_smile_close onlayer master
 with characlose
 
-mi "And now that you're going to help{w=.5}{nw}"
+mi "And now that you're going to help-{w=.5}{nw}"
 
 show shizu adjust_smug_close onlayer master
 with charachange
@@ -3735,7 +3735,7 @@ ke "Huh? What? Who is it?"
 
 "If this is the way he treats class members, it's no small wonder he's working on this alone."
 
-hi "It's me. Hisao. From the{w=.5}{nw}"
+hi "It's me. Hisao. From the-{w=.5}{nw}"
 
 ke "Right, right, I know that, man. What're you doing here, though?"
 
