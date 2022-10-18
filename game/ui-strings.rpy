@@ -508,9 +508,7 @@ Syureria
 TcDohl
 tottori
 VCR
-dr pepper
-Elusive
-dioxy
+HD Upscale Team
 
 {image=ui/flourish_left.png} {b}Special Thanks{/b} {image=ui/flourish_right.png}
 hir

@@ -1055,8 +1055,8 @@ label credits(c_movie=False):
 
     $ renpy.pause(1.0, hard=True)
 
-    $ textheight = 1660
-    $ textwidth = 315
+    $ textheight = 2280
+    $ textwidth = 421
 
     hide textsniff onlayer master
     with None
@@ -1071,7 +1071,7 @@ label credits(c_movie=False):
             textoffset += 160
 
         credits_final = LiveComposite((1440, totalsize),
-                                      (561,419), "ui/cred_logo.png",
+                                      (528,419), "ui/cred_logo.png",
                                       (textoffset, 1080 + buffer ), creditstext_disp,
                                       (560, totalsize - 1080 + 428), "ui/4lsl-small.png",
                                       )
@@ -1111,7 +1111,7 @@ label credits(c_movie=False):
     with None
 
 
-    show expression Text(u"�MMXV Four Leaf Studios", text_align=0.5, size=15) as copyright onlayer master at Position(xalign=0.5, yalign=0.576)
+    show expression Text(u"©MMXV Four Leaf Studios", text_align=0.5, size=15) as copyright onlayer master at Position(xalign=0.5, yalign=0.576)
     with Dissolve(2.0)
     $ renpy.pause(5.0, hard=True)
 
