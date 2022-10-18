@@ -293,11 +293,12 @@ label language_screen:
         ui.image(style.gm_root.background)
         ui.image("ui/bg-config.png", xalign=0.5, yalign=0.5)
         layout.navigation(None)
-        ui.vbox(xpos = 180, ypos = 120)
+        ui.vbox(xpos = 324, ypos = 216)
         ui.text(displayStrings.config_language_caption, style="page_caption")
-        ui.null(height=8)
+        ui.text(" Disclaimer: Languages outside of English have not been proof-read and will most likely have errors.",color="#00000080", size=18, font="font/playtime.ttf")
+        ui.null(height=15)
         ui.hbox()
-        ui.null(width=10)
+        ui.null(width=18)
         ui.vbox()
 
         for language in available_languages:
@@ -323,7 +324,8 @@ label language_screen:
                 button_state = "button"
                 button_image = "ui/bt-blank.png"
                 button_function = renpy.curry(switch_language)(target=language)
-            widget_button(text=button_label, displayable=button_image, clicked=button_function, state=button_state, xsize=500, widgetyoffset=3)
+            ui.null(height=15)
+            widget_button(text=button_label, displayable=button_image, clicked=button_function, state=button_state, xsize=900, widgetyoffset=3)
 
         ui.close()
         ui.close()
