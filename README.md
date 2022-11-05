@@ -7,4 +7,5 @@ Known bugs:
  - Auto mode is broken.
  - Good ending credit videos are slightly over-saturated.
  - Checkbox wipe animation was cut, will be re-implemented if a fix is found.
+ 
 Outside of these, please let me know if any bugs, no matter how minor, are discovered. I want to make this a direct resolution upgrade with no alterations to the original, and fixing any bugs will allow me to do so.
